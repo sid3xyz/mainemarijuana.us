@@ -1,4 +1,5 @@
-<!doctype html><html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -6,35 +7,28 @@
   <title>MaineMarijuana.us | Cannabis Retail Compliance Hub</title>
   <meta name="description" content="Complete compliance toolkit for Maine cannabis retailers: printable signs, training guides, METRC resources, and regulatory updates." />
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <!-- admin dispatch: this portal page is intentionally JS-free for speed, reliability, and printability -->
   <meta name="robots" content="index, follow" />
 </head>
 <body data-page="portal">
   <a href="#main" class="skip-link">Skip to content</a>
-  <header class="masthead" role="banner" data-enhanced="nav">
-    <div class="masthead__inner">
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="MaineMarijuana.us home">
         <span class="brand__wordmark">MaineMarijuana.us</span>
         <span class="brand__tagline">Cannabis retail compliance hub</span>
       </a>
-      <button type="button" class="masthead__toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="masthead__toggle-bar"></span>
-        <span class="masthead__toggle-bar"></span>
-      </button>
-      <nav class="masthead__nav" id="primary-nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="resources/index.html">Print Center</a>
-        <a href="guides/budtender/index.html">Budtenders</a>
-        <a href="guides/manager/index.html">Managers</a>
-        <a href="metrc/index.html">METRC</a>
-        <a href="tools.html">Tools</a>
-        <a href="guidencedocs/index.html">OCP Docs</a>
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-menu">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="resources/index.html">Print Center</a>
+          <a href="guides/budtender/index.html">Budtenders</a>
+          <a href="guides/manager/index.html">Managers</a>
+          <a href="metrc/index.html">METRC</a>
+          <a href="tools.html">Tools</a>
+          <a href="guidencedocs/index.html">OCP Docs</a>
+        </div>
       </nav>
-      <div class="masthead__meta">
-        <span class="masthead__badge">Retail compliance hub</span>
-        <div class="last-updated upper text-small" aria-label="Index last updated"><span>Updated </span><time></time></div>
-      </div>
     </div>
   </header>
 
@@ -42,9 +36,10 @@
     <main id="main" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <ol>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li aria-current="page">Home</li>
         </ol>
       </nav>
+      <!-- admin dispatch: portal hero sets the compliance brief, keep copy lean for on-shift staff skimming -->
       <section class="hero hero--portal" aria-labelledby="portal-title">
         <div class="hero__content">
           <p class="eyebrow">Complete Compliance Toolkit</p>
@@ -55,23 +50,17 @@
             <a class="btn btn--ghost" href="search.html">Search</a>
           </div>
           <dl class="hero__metrics" aria-label="Key resources">
-            <div>
-              <dt>Printable Signs</dt>
-              <dd>Required signage, posters, and staff references</dd>
-            </div>
-            <div>
-              <dt>Staff Training</dt>
-              <dd>Budtender scripts, manager procedures, METRC training</dd>
-            </div>
-            <div>
-              <dt>Compliance Tools</dt>
-              <dd>Purchase calculators, checklists, and regulatory guides</dd>
-            </div>
+            <dt>Printable Signs</dt>
+            <dd>Required signage, posters, and staff references</dd>
+            <dt>Staff Training</dt>
+            <dd>Budtender scripts, manager procedures, METRC training</dd>
+            <dt>Compliance Tools</dt>
+            <dd>Purchase calculators, checklists, and regulatory guides</dd>
           </dl>
         </div>
-        
       </section>
 
+      <!-- admin dispatch: tile grid surfaces fast jumps for budtenders, managers, and compliance leads -->
       <section class="section-stack" aria-labelledby="hub-sections">
         <div class="section-intro">
           <h2 id="hub-sections">Hub Sections</h2>
@@ -122,8 +111,9 @@
           </article>
         </div>
       </section>
+    </main>
+  </div>
 
-  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="index.html">MaineMarijuana.us</a> • v1.75 • Public reference archive • Not legal advice.</footer>
-        </main>
-      </div>
-    </body></html>
+  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="index.html">MaineMarijuana.us</a> • v1.76 • Public reference archive • Not legal advice.</footer>
+</body>
+</html>

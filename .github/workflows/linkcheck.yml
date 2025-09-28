@@ -17,9 +17,8 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           args: >-
-            --no-progress --verbose --exclude-mail --accept 200,206
-            --exclude "https://www.maine.gov/.*"
-            --exclude "^mailto:"
+            --config .lychee.toml
+            --no-progress
             --base .
             **/*.html
         env:

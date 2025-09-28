@@ -1,6 +1,6 @@
 # MaineMarijuana.us
 
-Standalone public reference portal for Maine adult-use cannabis operations and compliance. Lives entirely inside the `mj/` folder and does **not** depend on the main `sid3.xyz` site assets.
+Standalone public reference portal for Maine adult-use cannabis operations and compliance. Static HTML/CSS/JS with no build step; does **not** depend on the main `sid3.xyz` site assets.
 
 ## Contents
 - `index.html` – Search-first landing that filters all resources and links only to downstream pages.
@@ -9,8 +9,8 @@ Standalone public reference portal for Maine adult-use cannabis operations and c
 - `summary-compliance.html` – Retail Operations Playbook snapshot of frontline duties and escalation triggers.
 - `summary-title28-b.html` – High-level map of the full statute.
 - `summary-title28-bch1.html` / `summary-title28-bch3.html` – Chapter-specific briefs for quick consultation.
-- `styles.css` – Self-contained design system (dark theme, responsive, print styles, summary layouts, search UI).
-- `script.js` – Enhancements: heading IDs, TOC generation, scrollspy, last updated stamps, quick search filter, print triggers, resource filtering, DOB calculator, and hash focus helpers.
+- `styles.css` – Self-contained design system (dark theme, responsive, print styles, summary layouts, search UI, simple header).
+- `script.js` – Optional enhancements for interactive pages only: heading IDs, TOC generation, scrollspy, print triggers, search UI, resource filtering, DOB calculator, hash focus helpers. No header/nav JS.
 - `sitemap.xml` – Canonical URLs advertised to crawlers via `robots.txt`.
 - `guidencedocs/title28-B.pdf`, `guidencedocs/title28-Bch1.pdf`, `guidencedocs/title28-Bch3.pdf` – Statute source documents (placeholders if not yet present).
 
@@ -20,6 +20,15 @@ Standalone public reference portal for Maine adult-use cannabis operations and c
 - Print view strips navigation & chrome automatically.
 - Each section clearly cited (statutory references use short form in italics).
 - All edible product weight (not just THC) counted in examples to reinforce rule.
+
+### JavaScript usage policy
+- JS-free by default: Do not include `script.js` on purely static pages (landing, roles, downloads, guide summaries, METRC landing, static training and quick references).
+- Include `script.js` only on pages that need it:
+   - `search.html` (resource search UI)
+   - `tools.html` (purchase calculator)
+   - `resources/` print pages (print button) and `resources/index.html` (print toolbar and filter)
+   - `guidencedocs/index.html` (document search)
+- If adding new interactive behavior, scope it to that page; avoid loading site-wide JS unnecessarily.
 
 
 ## Purchase Limit Quick Reference
@@ -53,7 +62,7 @@ Known behaviors:
 - Color fidelity depends on “Background graphics” being enabled in the browser’s print dialog.
 
 ## Versioning
-- All footers currently display `v1.75`.
+- All footers currently display `v1.76`.
 - Increment the version string when:
    - Policies change materially (new limits, rules, or procedures), or
    - Layout / navigation shifts that affect documentation.
@@ -64,6 +73,14 @@ Known behaviors:
 - Scrollspy updates current section in TOC on the full guide.
 - Search field announces remaining result count.
 - Color contrast tested against WCAG AA for body and primary UI elements.
+
+### Header & navigation
+- Simple, CSS-first header using native `<details>/<summary>` for the menu on small screens; no JavaScript required.
+- Print mode hides the header automatically; layout is grid-based and avoids overlaps.
+
+## Header maintenance
+- Each page may include its own header markup. The homepage (`index.html`) shows the canonical example.
+- Avoid heavy JS for navigation; prefer semantic HTML and CSS for resilience and print readiness.
 
 ## Archival & Preservation Notes
 - Aligns with the Maine Office of Cannabis Policy guidance archive messaging that materials are provided “to provide interested parties with access to information of importance to industry stakeholders.”
@@ -90,3 +107,14 @@ To go live:
 - Set “Build command” to empty and “Output directory” to `/`
 - Verify headers via browser devtools (Cache-Control, security headers)
 - Review print preview and JS-disabled readability on key pages
+
+## CI and Link Checking
+
+- Link checks run automatically on pull requests and on pushes to `main` via the "Link Check" workflow.
+- Local link check (same settings as CI):
+
+```bash
+lychee --config .lychee.toml --no-progress **/*.html
+```
+
+See the PR template for the pre-merge checklist, including JS-free-by-default and accessibility passes.

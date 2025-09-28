@@ -1,0 +1,27 @@
+#############################  Display  #############################
+# Accepts log level: "error", "warn", "info", "debug", "trace"
+verbose = "info"
+# Don't show interactive progress bar while checking links.
+no_progress = true
+
+#############################  Requests  ############################
+# Comma-separated list or array of accepted status codes for valid links.
+# See docs for range syntax; we keep it narrow here.
+accept = ["200", "206"]
+# Only test links with web schemes
+scheme = ["http", "https"]
+# Minimum wait time (seconds) between retries of failed requests
+retry_wait_time = 2
+
+#############################  Runtime  #############################
+# Maximum number of concurrent link checks
+max_concurrency = 8
+# Maximum number of retries per request
+max_retries = 2
+
+#############################  Exclusions  ##########################
+# Exclude patterns (regex)
+exclude = [
+  "https://www.maine.gov/.*",
+  "^mailto:",
+]
