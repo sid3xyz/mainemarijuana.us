@@ -33,10 +33,27 @@ Standalone public reference portal for Maine adult-use cannabis operations and c
 Entire edible product **weight** counts toward the 2.5 oz total.
 
 ## Printing
-Use the browser Print dialog on `compliance_guide.html`. Navigation, TOC, and footer are suppressed. Code & callouts convert to light scheme-ready contrast.
+Use the browser Print dialog on any page in `resources/`. Navigation chrome is suppressed automatically.
+
+### Print Output & Troubleshooting
+- Paper: US Letter 8.5" × 11" (Portrait)
+- Scale: 100% (do not use Fit to page)
+- Margins: Default/Normal (~0.5")
+- Background graphics: Enable to preserve subtle tints and label chips
+- Headers/footers: Disable browser headers/footers
+
+Browser notes:
+- Chrome/Edge: In the print dialog, expand More settings → check Background graphics and set Scale 100%. Disable Headers and footers.
+- Firefox: In the print dialog, open Options → enable Print backgrounds (colors & images); set Scale 100% and uncheck print headers/footers.
+- Safari: In the dialog, open the drop-down (Details) → enable Print backgrounds; set Scale 100% and uncheck headers/footers.
+
+Known behaviors:
+- Table headers repeat across pages when the table has a proper `<thead>` and print styles are applied.
+- Complex grid sections are simplified in print to avoid awkward page breaks.
+- Color fidelity depends on “Background graphics” being enabled in the browser’s print dialog.
 
 ## Versioning
-- All footers currently display `v1.5`.
+- All footers currently display `v1.75`.
 - Increment the version string when:
    - Policies change materially (new limits, rules, or procedures), or
    - Layout / navigation shifts that affect documentation.

@@ -686,7 +686,7 @@ li {
 }
 
 /* Print pagination strategy
-   - Use @page for Letter + 0.75in margins (works across modern browsers)
+  - Use @page for Letter + 0.5in margins (works across modern browsers)
    - Disable flex/grid in wrappers so content flows naturally across pages
    - Provide utility classes:
      .page-break / .page-break-before => force new page before
@@ -716,10 +716,10 @@ li {
     content: none !important;
   }
 
-  /* Define per-page layout */
+  /* Define per-page layout (explicit US Letter) */
   @page {
-    size: letter portrait; /* Explicitly set to US Letter for consistency */
-    margin: 0.75in; /* Standard margins for clean printing */
+    size: 8.5in 11in; /* US Letter explicit size */
+    margin: 0.5in;    /* Safe printable margin for most desktop printers */
   }
 
   /* Cross-browser fragmentation controls */
@@ -750,6 +750,10 @@ li {
     break-inside: avoid; /* Modern */
     page-break-inside: avoid; /* Legacy alias */
   }
+
+  /* Keep checklist items together when possible */
+  .checklist-items,
+  .checklist-item { break-inside: avoid; page-break-inside: avoid; }
 
   /* Tame complex layout containers that fragment poorly */
   .limit-grid,
@@ -796,6 +800,11 @@ li {
     print-color-adjust: exact;         /* Standardized property */
   }
 
+  /* Ensure media fits within printable area */
+  img, svg, canvas { max-width: 100% !important; height: auto !important; }
+  table { width: 100% !important; max-width: 100% !important; table-layout: auto; }
+  td, th { overflow-wrap: anywhere; word-break: break-word; }
+
   .print-page {
     border: none;
     box-shadow: none;
@@ -823,3 +832,20 @@ li {
     background: #333;
   }
 }
+
+/* Accessibility utilities */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Elements that should only appear on printed output */
+.print-only { display: none; }
+@media print { .print-only { display: block !important; } }
