@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 • MaineMarijuana.us</title>
+  <meta name="color-scheme" content="dark light" />
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root {
+      color-scheme: dark light;
+      --bg: #041411;
+      --bg-grad: radial-gradient(circle at 20% 20%, rgba(40,180,140,0.3), transparent 60%),
+                  radial-gradient(circle at 80% 30%, rgba(110,215,180,0.25), transparent 65%),
+                  #041411;
+      --surface: rgba(9, 31, 26, 0.85);
+      --border: rgba(87, 203, 163, 0.35);
+      --text: #ecf7f0;
+      --muted: rgba(236,247,240,0.65);
+      --accent: #49f1ba;
+      --accent-soft: rgba(73,241,186,0.15);
+      --shadow: 0 24px 60px rgba(0,0,0,0.55);
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(2rem, 6vw, 4rem);
+      background: var(--bg-grad);
+      color: var(--text);
+      text-rendering: optimizeLegibility;
+    }
+    .lost-shell {
+      position: relative;
+      width: min(560px, 100%);
+      padding: clamp(2rem, 5vw, 3rem);
+      border-radius: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+      overflow: hidden;
+    }
+    .lost-shell::before,
+    .lost-shell::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      filter: blur(0.3rem);
+      z-index: 0;
+    }
+    .lost-shell::before {
+      width: 220px;
+      height: 220px;
+      top: -80px;
+      right: -60px;
+    }
+    .lost-shell::after {
+      width: 180px;
+      height: 180px;
+      bottom: -70px;
+      left: -50px;
+    }
+    .lost-inner { position: relative; z-index: 1; display: grid; gap: 1.5rem; }
+    .badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(73,241,186,0.12); border: 1px solid rgba(73,241,186,0.35); color: var(--accent); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 2.6rem); letter-spacing: -0.01em; }
+    p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .actions a { position: relative; z-index: 1; text-decoration: none; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem; padding: 0.75rem 1.4rem; border-radius: 14px; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .actions a:nth-child(1) { background: linear-gradient(120deg, #49f1ba, #1fb388); color: #05241c; box-shadow: 0 18px 30px rgba(73,241,186,0.25); }
+    .actions a:nth-child(1):hover { transform: translateY(-2px); box-shadow: 0 24px 40px rgba(73,241,186,0.35); }
+    .actions a:nth-child(2) { background: transparent; border: 1px solid rgba(236,247,240,0.25); color: var(--text); }
+    .actions a:nth-child(2):hover { border-color: rgba(73,241,186,0.65); color: var(--accent); }
+    .grid { display: grid; gap: 0.9rem; padding: 1.2rem; border-radius: 18px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); }
+    .grid span { display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(236,247,240,0.45); }
+  .grid strong { display: block; font-size: 0.95rem; color: var(--text); }
+  .grid a { color: var(--accent); text-decoration: none; }
+  .grid a:hover { text-decoration: underline; }
+    .noise { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; opacity: 0.15; background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"%3E%3Cpath fill="rgba(236,247,240,0.05)" d="M0 0h1v1H0z"/%3E%3C/svg%3E'); animation: shimmer 8s linear infinite; }
+    @keyframes shimmer { 50% { opacity: 0.25; } }
+    @media (max-width: 540px) {
+      .lost-shell { padding: 2.2rem 1.8rem; border-radius: 18px; }
+      .grid { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="lost-shell">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="lost-inner">
+      <span class="badge">404 · off the map</span>
+      <h1>Looks like this page never got licensed.</h1>
+      <p>The URL you followed isn’t part of the MaineMarijuana.us playbook. Jump back to mission control or open the compliance tools you need.</p>
+      <div class="grid" role="presentation">
+        <div>
+          <span>Quick actions</span>
+          <strong>Hub · Tools · Playbook</strong>
+        </div>
+        <div>
+          <span>Need statute?</span>
+          <strong><a href="guidencedocs/title28-B.pdf">Download Title 28‑B PDF</a></strong>
+        </div>
+      </div>
+      <div class="actions">
+        <a href="/mj/index.html">Back to ops hub</a>
+        <a href="/mj/tools.html">Open tools</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

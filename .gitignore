@@ -1,0 +1,19 @@
+# Local development artifacts
+.venv/
+.vscode/
+.idea/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Temporary/editor files
+*.log
+*.tmp
+*.swp
+*.swo
+npm-debug.log*

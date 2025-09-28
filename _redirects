@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects for moved statute PDFs
+/title28-B.pdf  /guidencedocs/title28-B.pdf  301
+/title28-Bch1.pdf  /guidencedocs/title28-Bch1.pdf  301
+/title28-Bch3.pdf  /guidencedocs/title28-Bch3.pdf  301

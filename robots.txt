@@ -1,0 +1,7 @@
+# Robots policy for MaineMarijuana.us on Cloudflare Pages
+# Public posture: allow indexing and advertise the sitemap for crawlers.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://mainemarijuana.us/sitemap.xml

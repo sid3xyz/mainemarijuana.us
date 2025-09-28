@@ -1,0 +1,111 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Search the Hub | MaineMarijuana.us</title>
+  <meta name="description" content="Search guides, tools, statutes, and resources across the Maine cannabis retail compliance hub." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <meta name="robots" content="index, follow" />
+</head>
+<body data-page="portal-section">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="masthead masthead--compact" role="banner" data-enhanced="nav">
+    <div class="masthead__inner">
+      <a class="brand brand--sub" href="index.html" aria-label="Return to MaineMarijuana.us home">
+        <span class="brand__wordmark">MaineMarijuana.us</span>
+        <span class="brand__tagline">Search</span>
+      </a>
+      <button type="button" class="masthead__toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="masthead__toggle-bar"></span>
+        <span class="masthead__toggle-bar"></span>
+      </button>
+      <nav class="masthead__nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="resources/index.html">Print Center</a>
+        <a href="guides/budtender/index.html">Budtenders</a>
+        <a href="guides/manager/index.html">Managers</a>
+        <a href="metrc/index.html">METRC</a>
+        <a href="tools.html">Tools</a>
+        <a href="guidencedocs/index.html">OCP Docs</a>
+      </nav>
+      <div class="masthead__meta">
+        <div class="last-updated upper text-small" aria-label="Search updated"><span>Updated </span><time></time></div>
+      </div>
+    </div>
+  </header>
+  <div class="site-shell single-column">
+    <main id="main" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Search</li>
+        </ol>
+      </nav>
+      <section class="hero" aria-labelledby="search-title">
+        <div class="hero__content">
+          <div class="status-pill">Find it fast</div>
+          <h1 id="search-title">Search the Hub</h1>
+          <p class="hero__lead">Find guides, statutes, and tools by keyword, topic, or content type.</p>
+        </div>
+      </section>
+
+      <section class="module module--search" aria-label="Search compliance resources">
+        <div class="module__surface">
+          <div class="module__header">
+            <h2>Search</h2>
+            <p>Try “purchase limit”, “ID checklist”, or “Title 28-B”.</p>
+          </div>
+          <label class="sr-only" for="resource-search">Search the hub</label>
+          <div class="search-field">
+            <input type="search" id="resource-search" class="search-input large" placeholder="Type to search…" autocomplete="off" spellcheck="false" />
+            <div id="search-suggestions" class="search-suggestions hidden" role="listbox" aria-label="Suggested searches"></div>
+          </div>
+          <div class="search-meta">
+            <span><strong id="search-count">0</strong> results</span>
+            <span>Filter by topic or content type below</span>
+          </div>
+          <div class="facet-bar" aria-label="Filter resources">
+            <div class="facet-group">
+              <span class="facet-label">Topic</span>
+              <div class="facet-chips" role="group" aria-label="Topic filters">
+                <button type="button" class="facet-chip is-active" data-facet-topic="all" aria-pressed="true">All topics</button>
+                <button type="button" class="facet-chip" data-facet-topic="id" aria-pressed="false">ID checks</button>
+                <button type="button" class="facet-chip" data-facet-topic="purchase" aria-pressed="false">Purchase math</button>
+                <button type="button" class="facet-chip" data-facet-topic="packaging" aria-pressed="false">Packaging</button>
+                <button type="button" class="facet-chip" data-facet-topic="prohibited" aria-pressed="false">Prohibited sales</button>
+                <button type="button" class="facet-chip" data-facet-topic="conduct" aria-pressed="false">In-store</button>
+                <button type="button" class="facet-chip" data-facet-topic="faq" aria-pressed="false">Customer FAQs</button>
+                <button type="button" class="facet-chip" data-facet-topic="statute" aria-pressed="false">Statute</button>
+                <button type="button" class="facet-chip" data-facet-topic="guidance" aria-pressed="false">OCP docs</button>
+                <button type="button" class="facet-chip" data-facet-topic="metrc" aria-pressed="false">METRC</button>
+                <button type="button" class="facet-chip" data-facet-topic="staff" aria-pressed="false">Staff training</button>
+                <button type="button" class="facet-chip" data-facet-topic="management" aria-pressed="false">Management</button>
+                <button type="button" class="facet-chip" data-facet-topic="signage" aria-pressed="false">Signage</button>
+              </div>
+            </div>
+            <div class="facet-group">
+              <span class="facet-label">Type</span>
+              <div class="facet-chips" role="group" aria-label="Content type filters">
+                <button type="button" class="facet-chip is-active" data-facet-kind="all" aria-pressed="true">All types</button>
+                <button type="button" class="facet-chip" data-facet-kind="guide" aria-pressed="false">Guides</button>
+                <button type="button" class="facet-chip" data-facet-kind="summary" aria-pressed="false">Summaries</button>
+                <button type="button" class="facet-chip" data-facet-kind="statute" aria-pressed="false">Statute</button>
+                <button type="button" class="facet-chip" data-facet-kind="tool" aria-pressed="false">Tools</button>
+                <button type="button" class="facet-chip" data-facet-kind="training" aria-pressed="false">Training</button>
+                <button type="button" class="facet-chip" data-facet-kind="printable" aria-pressed="false">Printables</button>
+                <button type="button" class="facet-chip" data-facet-kind="documents" aria-pressed="false">Documents</button>
+              </div>
+            </div>
+          </div>
+          <div id="direct-answer" class="direct-answer hidden" aria-live="polite"></div>
+          <div id="search-empty" class="empty-results hidden">No matches. Try different keywords.</div>
+        </div>
+      </section>
+
+  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="index.html">MaineMarijuana.us</a> • v1.5 • Public reference archive • Not legal advice.</footer>
+    </main>
+  </div>
+</body></html>
