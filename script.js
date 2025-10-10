@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('theme-toggle');
   if (!toggle) return;
   const body = document.body;
-  // Use data-theme for CSS variable switching
+  // Prefer system theme if no localStorage value
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
   function getTheme() {
-    return localStorage.getItem('theme') || 'light';
+    return localStorage.getItem('theme') || getSystemTheme();
   }
   function setTheme(theme) {
-    body.classList.toggle('dark-mode', theme === 'dark');
     body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
@@ -51,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const current = getTheme();
     const next = current === 'dark' ? 'light' : 'dark';
     setTheme(next);
+  });
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
   });
 });
 
