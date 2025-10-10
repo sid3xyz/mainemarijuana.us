@@ -160,16 +160,26 @@
       </section>
       <section id="accessibility" class="section-stack">
         <div class="section-intro">
-          <h2>Accessibility & Print Optimization</h2>
-          <p>All guides are WCAG AA compliant, print-optimized, and screen-reader friendly. Use skip links and keyboard navigation for fast access. This section provides explicit instructions for accessibility and print layout, ensuring every budtender can use these resources regardless of device or ability.</p>
+          <h2>Accessibility & Print Features</h2>
+          <p>This guide is designed to work for everyone, whether you use a mouse, keyboard, screen reader, or need to print reference materials for the counter.</p>
         </div>
-        <ul class="data-list">
-          <li><strong>Skip links:</strong> Always include <code>&lt;a href="#main" class="skip-link"&gt;Skip to content&lt;/a&gt;</code> at the top of every page for keyboard and screen reader navigation.</li>
-          <li><strong>ARIA labels:</strong> Use <code>aria-label</code> for navigation, breadcrumbs, and major sections. Example: <code>&lt;nav aria-label="Primary"&gt;</code> and <code>&lt;nav class="breadcrumbs" aria-label="Breadcrumb"&gt;</code>.</li>
-          <li><strong>Heading hierarchy:</strong> Use semantic headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for logical structure and screen reader compatibility.</li>
-          <li><strong>Print optimization:</strong> Suppress navigation in print view, use high-contrast layout, and clear section breaks. Example: <code>@media print { .site-header, .nav { display: none; } }</code></li>
-          <li><strong>Keyboard navigation:</strong> Ensure all interactive elements are reachable via <code>Tab</code> and have visible focus states.</li>
-        </ul>
+        <div class="content-section">
+          <h3>Using This Page with Assistive Technology</h3>
+          <ul class="data-list">
+            <li><strong>Screen readers:</strong> Navigate by heading (H key) to jump between sections. All images have descriptive alt text.</li>
+            <li><strong>Keyboard navigation:</strong> Press Tab to move through links and buttons. Press Enter to activate. Use Shift+Tab to go back.</li>
+            <li><strong>Skip navigation:</strong> Press Tab when the page loads to access a "Skip to content" link that jumps past the header.</li>
+            <li><strong>High contrast:</strong> All text meets WCAG AA standards for readability against backgrounds.</li>
+            <li><strong>Focus indicators:</strong> A visible outline appears around interactive elements when you tab to them.</li>
+          </ul>
+          <h3>Printing This Guide</h3>
+          <ul class="data-list">
+            <li><strong>Print-optimized layout:</strong> Use your browser's print function (Ctrl+P or Cmd+P) to generate a clean, readable copy.</li>
+            <li><strong>Navigation hidden:</strong> The header and navigation menu automatically hide when printing to save space.</li>
+            <li><strong>Clear sections:</strong> Each section starts on a clear break with proper spacing for easy reference.</li>
+            <li><strong>Save as PDF:</strong> Use "Save as PDF" in your print dialog to create a digital copy for tablets or phones.</li>
+          </ul>
+        </div>
       </section>
           <article class="card" id="id-equipment">
             <span class="tagline">Before doors open</span>
