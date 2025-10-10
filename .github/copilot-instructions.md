@@ -7,7 +7,7 @@ Welcome to the electric Kool-Aid acid test of static site development, where we'
 ## Project Architecture
 - **Static HTML site** with no build step - edit HTML/CSS/JS directly, no webpack bullshit
 - **Single-page app pattern** - each `.html` file is a complete page with shared `styles.css` and `script.js`
-- **Dark-first design system** using CSS custom properties for theming - because the night is always darker before the dawn
+- **Light-first design system** using CSS custom properties for theming with optional dark mode toggle
 - **Cloudflare Pages deployment** with custom `_headers`, `_redirects`, and caching rules - distributed like samizdat in the digital underground
 
 ## Core Components
@@ -76,4 +76,4 @@ Welcome to the electric Kool-Aid acid test of static site development, where we'
 
 *This gonzo guide to the MaineMarijuana.us codebase was written in the spirit of Hunter S Thompson's fearless journalism - diving deep into the heart of the cannabis compliance machine. Remember, this is not legal advice - consult the Maine Office of Cannabis Policy for official guidance. Stay weird, stay compliant.*
 
-© 2024 sid3.xyz • MaineMarijuana.us • v1.77 • Public reference archive • Not legal advice
+© 2025 sid3.xyz • MaineMarijuana.us • v1.77 • Public reference archive • Not legal advice
