@@ -60,4 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Lazy-load non-critical scripts for performance optimization
+const lazyLoadScripts = [
+  'resources-filter.js',
+  'app.js'
+];
+
+lazyLoadScripts.forEach(src => {
+  const script = document.createElement('script');
+  script.src = base + src;
+  script.defer = true;
+  script.onload = () => console.log(`${src} loaded`);
+  document.body.appendChild(script);
+});
+
 

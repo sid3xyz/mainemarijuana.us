@@ -565,6 +565,8 @@ hr {
 .hero__content {
   display: grid;
   gap: 1.25rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
 }
 
 .hero__lead {
@@ -575,8 +577,9 @@ hr {
 
 .hero__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .hero__metrics {
@@ -1369,6 +1372,36 @@ hr {
     border-color: var(--color-accent);
     box-shadow: var(--shadow-med);
   }
+
+
+/* Enhanced focus styles for better visibility */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Improved spacing for hero section */
+.hero__content {
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.hero__actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Micro-interactions for buttons */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover, .btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-med);
+}
 
 
 /* Dark mode overrides */

@@ -118,3 +118,21 @@ lychee --config .lychee.toml --no-progress **/*.html
 ```
 
 See the PR template for the pre-merge checklist, including JS-free-by-default and accessibility passes.
+
+## Recent UI/UX Improvements
+
+### Changes Made
+1. **Enhanced Focus Styles:** Improved visibility for focus indicators to ensure better accessibility.
+2. **Hero Section Updates:** Adjusted spacing and alignment for better visual hierarchy and added ARIA labels for screen reader support.
+3. **Micro-Interactions:** Introduced hover and focus effects for buttons to improve user engagement.
+4. **Performance Optimization:** Lazy-loaded non-critical scripts to enhance page load times.
+
+### Rationale
+These changes were implemented to align with modern web design standards, focusing on:
+- **Accessibility:** Ensuring the site is usable for all users, including those relying on assistive technologies.
+- **User Experience:** Creating a visually appealing and intuitive interface.
+- **Performance:** Optimizing load times for a seamless browsing experience.
+
+### Validation
+- Tested across multiple devices and browsers to ensure consistent functionality and appearance.
+- Verified compliance with WCAG AA standards for accessibility.
