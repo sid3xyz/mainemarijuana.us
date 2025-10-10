@@ -28,28 +28,29 @@
 })();
 
 // Theme toggle functionality
-document.addEventListener('DOMContentLoaded', () => {
+
+// Gonzo theme toggle: robust, accessible, persistent
+document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('theme-toggle');
-  if (!toggle) return; // Skip if toggle not present
-
+  if (!toggle) return;
   const body = document.body;
-  const currentTheme = localStorage.getItem('theme') || 'light';
-
-  if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    toggle.textContent = '🌙';
-    toggle.setAttribute('aria-label', 'Switch to light mode');
-  } else {
-    toggle.textContent = '☀️';
-    toggle.setAttribute('aria-label', 'Switch to dark mode');
+  // Use data-theme for CSS variable switching
+  function getTheme() {
+    return localStorage.getItem('theme') || 'light';
   }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+  function setTheme(theme) {
+    body.classList.toggle('dark-mode', theme === 'dark');
+    body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
     toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.setAttribute('aria-pressed', theme === 'dark');
+  }
+  setTheme(getTheme());
+  toggle.addEventListener('click', function() {
+    const current = getTheme();
+    const next = current === 'dark' ? 'light' : 'dark';
+    setTheme(next);
   });
 });
 
