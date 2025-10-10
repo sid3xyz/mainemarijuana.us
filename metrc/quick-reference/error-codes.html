@@ -42,18 +42,199 @@
         </div>
       </section>
 
-      <div class="content-placeholder">
-        <h2>Reference Content Coming Soon</h2>
-        <p>This quick reference guide is under development. In the meantime, please refer to the <a href="../index.html">METRC Hub</a> for available resources, or download the <a href="../../guidencedocs/Maine%20OCP%20Inventory%20Tracking%20System%20Getting%20Started%20Guidance%20-%20AUCP%20v8.10.2022.pdf">official METRC Getting Started Guide</a>.</p>
-        <p><strong>Planned Content:</strong></p>
+      <section class="content-section" aria-labelledby="common-errors-heading">
+        <h2 id="common-errors-heading">Common METRC Error Codes & Resolutions</h2>
+        <p>Quick reference for the most frequent METRC errors encountered in retail operations.</p>
+        <table>
+          <thead>
+            <tr><th>Error Code</th><th>Description</th><th>Cause</th><th>Resolution Steps</th><th>Escalation</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Package Not Found</td>
+              <td>Scanned tag doesn't exist in METRC</td>
+              <td>Damaged tag, wrong facility, data entry error</td>
+              <td>1. Recheck tag scanning<br>2. Verify facility selection<br>3. Contact supplier for verification<br>4. Document and quarantine package</td>
+              <td>Manager if persistent; OCP for missing packages</td>
+            </tr>
+            <tr>
+              <td>Invalid Package Status</td>
+              <td>Package status prevents transaction</td>
+              <td>Recalled, expired, or transferred package</td>
+              <td>1. Check package details in METRC<br>2. Verify expiration date<br>3. Confirm recall status<br>4. Remove from sale if invalid</td>
+              <td>OCP for recalled products</td>
+            </tr>
+            <tr>
+              <td>Insufficient Quantity</td>
+              <td>Not enough inventory for sale</td>
+              <td>Previous sale not recorded, theft, or counting error</td>
+              <td>1. Recount physical inventory<br>2. Check recent transactions<br>3. Reconcile with METRC<br>4. Document discrepancy</td>
+              <td>Manager for variances >5%</td>
+            </tr>
+            <tr>
+              <td>Connection Timeout</td>
+              <td>METRC system unresponsive</td>
+              <td>Network issues, server maintenance, high traffic</td>
+              <td>1. Check internet connection<br>2. Retry after 5 minutes<br>3. Use offline mode if available<br>4. Document downtime</td>
+              <td>IT support; OCP if >24 hours</td>
+            </tr>
+            <tr>
+              <td>Permission Denied</td>
+              <td>User lacks required access</td>
+              <td>Incorrect role assignment, expired permissions</td>
+              <td>1. Verify user role in METRC<br>2. Check account status<br>3. Request access from admin<br>4. Use alternative authorized user</td>
+              <td>Facility admin for access changes</td>
+            </tr>
+            <tr>
+              <td>Data Validation Error</td>
+              <td>Required fields missing or invalid</td>
+              <td>Incomplete entry, format error, outdated data</td>
+              <td>1. Review all required fields<br>2. Check data formats<br>3. Update customer info<br>4. Resubmit transaction</td>
+              <td>Manager for system issues</td>
+            </tr>
+            <tr>
+              <td>Duplicate Transaction</td>
+              <td>Sale already recorded</td>
+              <td>Double scanning, system lag, user error</td>
+              <td>1. Check recent transactions<br>2. Void duplicate if found<br>3. Confirm with customer<br>4. Document incident</td>
+              <td>Manager for refund procedures</td>
+            </tr>
+            <tr>
+              <td>Batch Not Found</td>
+              <td>Product batch missing from system</td>
+              <td>Supplier data entry error, system sync issue</td>
+              <td>1. Contact supplier for batch info<br>2. Check transfer manifests<br>3. Verify batch ID accuracy<br>4. Quarantine affected packages</td>
+              <td>OCP for missing batch data</td>
+            </tr>
+            <tr>
+              <td>License Validation Failed</td>
+              <td>License expired or invalid</td>
+              <td>Outdated license, data sync delay</td>
+              <td>1. Verify license status<br>2. Check expiration date<br>3. Contact OCP for updates<br>4. Update facility info</td>
+              <td>OCP immediately for license issues</td>
+            </tr>
+            <tr>
+              <td>Transfer Rejected</td>
+              <td>Incoming transfer not accepted</td>
+              <td>Manifest errors, facility issues, timing</td>
+              <td>1. Review transfer details<br>2. Contact sending facility<br>3. Check manifest accuracy<br>4. Accept or reject with reason</td>
+              <td>OCP for transfer disputes</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-section" aria-labelledby="system-errors-heading">
+        <h2 id="system-errors-heading">System & Connectivity Issues</h2>
+        <p>Handling METRC system-wide problems that affect operations.</p>
+        <h3>Network Problems</h3>
         <ul>
-          <li>Package scanning errors</li>
-          <li>Inventory discrepancy codes</li>
-          <li>Network connectivity issues</li>
-          <li>Permission and access errors</li>
-          <li>Data validation failures</li>
+          <li><strong>Slow Response Times:</strong> Check local network, try different device, contact ISP.</li>
+          <li><strong>Intermittent Connectivity:</strong> Use mobile hotspot as backup, document patterns.</li>
+          <li><strong>Complete Outage:</strong> Follow downtime procedures, notify OCP if >4 hours.</li>
+          <li><strong>SSL Certificate Errors:</strong> Clear browser cache, check system time, contact METRC support.</li>
         </ul>
-      </div>
+        <h3>Account Issues</h3>
+        <ul>
+          <li><strong>Locked Account:</strong> Wait 15 minutes, reset password, contact admin.</li>
+          <li><strong>Expired Password:</strong> Reset immediately, update security questions.</li>
+          <li><strong>Two-Factor Authentication:</strong> Check email/SMS, use backup codes, contact support.</li>
+          <li><strong>Role Changes:</strong> May take 24 hours to propagate, use alternative access.</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="data-errors-heading">
+        <h2 id="data-errors-heading">Data Entry & Validation Errors</h2>
+        <p>Common mistakes in data entry that cause METRC rejections.</p>
+        <h3>Customer Information</h3>
+        <ul>
+          <li><strong>Invalid ID Format:</strong> Ensure proper state ID format, check expiration.</li>
+          <li><strong>Missing DOB:</strong> Required for age verification, enter accurately.</li>
+          <li><strong>Address Errors:</strong> Must match ID, use full address format.</li>
+          <li><strong>Duplicate Customers:</strong> Search existing records before creating new.</li>
+        </ul>
+        <h3>Product Information</h3>
+        <ul>
+          <li><strong>Weight Discrepancy:</strong> Must match package label within tolerance.</li>
+          <li><strong>Strain Mismatch:</strong> Verify against batch records and labels.</li>
+          <li><strong>Expiration Issues:</strong> Check dates, remove expired products immediately.</li>
+          <li><strong>Package Type Errors:</strong> Select correct category (flower, concentrate, edible).</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="escalation-heading">
+        <h2 id="escalation-heading">Escalation Procedures</h2>
+        <p>When to escalate errors and who to contact for resolution.</p>
+        <h3>Internal Escalation</h3>
+        <ol>
+          <li><strong>Level 1 - Budtender:</strong> Try basic troubleshooting, document error.</li>
+          <li><strong>Level 2 - Shift Lead:</strong> Review procedures, attempt advanced fixes.</li>
+          <li><strong>Level 3 - Manager:</strong> Authorize system changes, contact external support.</li>
+          <li><strong>Level 4 - Owner:</strong> Legal/compliance issues, facility-wide problems.</li>
+        </ol>
+        <h3>External Contacts</h3>
+        <ul>
+          <li><strong>METRC Support:</strong> 1-855-638-3721 (technical issues, account problems).</li>
+          <li><strong>OCP Compliance:</strong> 207-287-4161 (regulatory issues, reporting requirements).</li>
+          <li><strong>OCP IT Helpdesk:</strong> help@metrc.com (system outages, data issues).</li>
+          <li><strong>Emergency:</strong> 911 (theft, security breaches, immediate threats).</li>
+        </ul>
+        <h3>Documentation Requirements</h3>
+        <ul>
+          <li>Log all errors with timestamps, error codes, and attempted solutions.</li>
+          <li>Record all communications with support and OCP.</li>
+          <li>Retain error logs for 7 years for compliance audits.</li>
+          <li>Include error resolution in staff training sessions.</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="prevention-heading">
+        <h2 id="prevention-heading">Error Prevention Best Practices</h2>
+        <p>Proactive measures to reduce METRC errors and improve efficiency.</p>
+        <h3>Staff Training</h3>
+        <ul>
+          <li>Regular METRC training sessions for all staff.</li>
+          <li>Certification requirements for complex procedures.</li>
+          <li>Cross-training to prevent single points of failure.</li>
+          <li>Performance tracking and coaching for error-prone tasks.</li>
+        </ul>
+        <h3>Process Improvements</h3>
+        <ul>
+          <li>Standardized checklists for common transactions.</li>
+          <li>Double-check procedures for high-value sales.</li>
+          <li>Automated alerts for unusual transactions.</li>
+          <li>Regular equipment maintenance and calibration.</li>
+        </ul>
+        <h3>Technology Solutions</h3>
+        <ul>
+          <li>Use barcode scanners for accurate data entry.</li>
+          <li>Implement POS system integration with METRC.</li>
+          <li>Regular software updates and security patches.</li>
+          <li>Backup internet connections for redundancy.</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="accessibility-heading">
+        <h2 id="accessibility-heading">Accessibility & Print Optimization</h2>
+        <p>This reference page is designed for accessibility and print use. Use keyboard navigation (Tab key) to move through interactive elements. Screen reader users can navigate with heading shortcuts.</p>
+        <h3>Accessibility Features</h3>
+        <ul>
+          <li><strong>Skip Link:</strong> Press Tab at page load to access "Skip to content" link, bypassing navigation.</li>
+          <li><strong>ARIA Labels:</strong> All sections have descriptive labels for screen readers.</li>
+          <li><strong>Keyboard Navigation:</strong> All links and buttons are keyboard accessible.</li>
+          <li><strong>High Contrast:</strong> Content meets WCAG AA standards for color contrast.</li>
+          <li><strong>Focus Indicators:</strong> Visible focus outlines for keyboard users.</li>
+        </ul>
+        <h3>Print Optimization</h3>
+        <ul>
+          <li>Print this page for offline reference during troubleshooting.</li>
+          <li>Navigation and interactive elements are hidden in print view.</li>
+          <li>Use browser's print preview (Ctrl+P) to optimize layout.</li>
+          <li>Print in landscape mode for tables.</li>
+          <li>Save as PDF for staff quick-reference guides.</li>
+        </ul>
+        <p class="inline-note">For full details, see <a href="../../guidencedocs/Maine%20OCP%20Inventory%20Tracking%20System%20Getting%20Started%20Guidance%20-%20AUCP%20v8.10.2022.pdf">OCP METRC Getting Started Guide</a> and <a href="https://www.metrc.com/maine">METRC Maine</a>.</p>
+      </section>
     </main>
   </div>
 </body></html>

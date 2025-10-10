@@ -27,3 +27,30 @@
   })();
 })();
 
+// Theme toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return; // Skip if toggle not present
+
+  const body = document.body;
+  const currentTheme = localStorage.getItem('theme') || 'light';
+
+  if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.textContent = '🌙';
+    toggle.setAttribute('aria-label', 'Switch to light mode');
+  } else {
+    toggle.textContent = '☀️';
+    toggle.setAttribute('aria-label', 'Switch to dark mode');
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  });
+});
+
+

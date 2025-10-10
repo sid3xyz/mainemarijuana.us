@@ -28,6 +28,7 @@
           <a href="../../tools.html">Tools</a>
           <a href="../../guidencedocs/index.html">OCP Docs</a>
         </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">☀️</button>
       </nav>
     </div>
   </header>
@@ -35,15 +36,90 @@
     <main id="main" tabindex="-1">
       <section class="hero hero--manager" aria-labelledby="manager-heading">
         <div class="hero__content">
-          <div class="status-pill">Management toolkit</div>
-          <h1 id="manager-heading">Store Management &amp; Compliance Oversight</h1>
-          <p class="hero__lead">Essential procedures for daily operations, team leadership, and regulatory compliance in Maine cannabis retail.</p>
+          <div class="status-pill">Maine Manager Reference</div>
+          <h1 id="manager-heading">Manager Training & Compliance Hub</h1>
+          <p class="hero__lead">Comprehensive guide for Maine cannabis retail managers. Covers daily workflow, compliance oversight, incident escalation, staff training, audit prep, accessibility, and statutory/OCP citations. Built for print, mobile, and shift handoff.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#shift-management">Shift management</a>
-            <a class="btn btn--ghost" href="#compliance-checks">Compliance oversight</a>
+            <a class="btn btn--primary" href="#daily-management">Daily Checklist</a>
+            <a class="btn btn--ghost" href="#compliance-oversight">Compliance Oversight</a>
+            <a class="btn btn--ghost" href="#incident-escalation">Incident Escalation</a>
+            <a class="btn btn--ghost" href="#staff-training">Staff Training</a>
+            <a class="btn btn--ghost" href="#audit-prep">Audit Prep</a>
           </div>
-          <p class="hero__note text-small">Sync this hub with the <a href="../compliance/compliance_guide.html">Retail Operations Playbook</a> and <a href="../../tools.html">budtender tools</a> for frontline execution.</p>
+          <p class="hero__note text-small">Sync this hub with the <a href="../compliance/compliance_guide.html">Retail Operations Playbook</a>, <a href="../../metrc/training/manager-oversight.html">METRC Manager Training</a>, and <a href="../../tools.html">budtender tools</a> for frontline execution.</p>
         </div>
+      </section>
+      <section id="daily-management" class="section-stack">
+        <div class="section-intro">
+          <h2>Daily Management Checklist</h2>
+          <p>Start every shift with these compliance-critical steps. Print for handoff.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Review compliance bulletins and overnight incident notes.</strong> <span class="citation">OCP Guidance</span></li>
+          <li><strong>Assign roles (greeter, inventory runner, closing lead) before doors open.</strong></li>
+          <li><strong>Verify signage, ID equipment, and product labeling.</strong> <span class="citation">28-B §509, §504(4), §701</span></li>
+          <li><strong>Conduct opening inventory reconciliation in METRC.</strong> <span class="citation">28-B §105</span></li>
+          <li><strong>Confirm staff training status and compliance knowledge.</strong></li>
+        </ul>
+      </section>
+      <section id="compliance-oversight" class="section-stack">
+        <div class="section-intro">
+          <h2>Compliance Oversight</h2>
+          <p>Manager duties for regulatory compliance and operational integrity.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Monitor all transactions for compliance with purchase limits, ID checks, and prohibited sales.</strong> <span class="citation">28-B §504, §1501</span></li>
+          <li><strong>Oversee daily METRC reconciliation and variance reporting.</strong> <span class="citation">28-B §105</span></li>
+          <li><strong>Ensure all corrective actions and compliance reports are documented and retained for 2 years.</strong> <span class="citation">28-B §305</span></li>
+          <li><strong>Respond to OCP bulletins and update SOPs as needed.</strong></li>
+        </ul>
+      </section>
+      <section id="incident-escalation" class="section-stack">
+        <div class="section-intro">
+          <h2>Incident Escalation Protocols</h2>
+          <p>Follow these steps for common incidents. Document and escalate per SOP.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Failed ID scan or suspected fake:</strong> Escalate to management, log incident, and notify OCP if unresolved. <span class="citation">28-B §504(4)</span></li>
+          <li><strong>Suspected diversion, theft, or security breach:</strong> Document, notify ownership, and report to OCP. <span class="citation">28-B §303</span></li>
+          <li><strong>Inventory discrepancy:</strong> Attempt reconciliation, escalate unresolved issues to OCP. <span class="citation">28-B §105</span></li>
+          <li><strong>Customer dispute or compliance challenge:</strong> Remain calm, cite the rule, and offer to escalate to OCP or legal counsel.</li>
+        </ul>
+      </section>
+      <section id="staff-training" class="section-stack">
+        <div class="section-intro">
+          <h2>Staff Training Procedures</h2>
+          <p>Ensure all staff are trained on compliance, METRC workflows, and incident handling.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Conduct onboarding and refresher training for all staff.</strong> <span class="citation">OCP Guidance</span></li>
+          <li><strong>Monitor staff performance and provide corrective coaching as needed.</strong></li>
+          <li><strong>Train staff on METRC workflows, error resolution, and compliance protocols.</strong> <span class="citation">28-B §105</span></li>
+          <li><strong>Document all training sessions and retain records for audit.</strong> <span class="citation">28-B §305</span></li>
+        </ul>
+      </section>
+      <section id="audit-prep" class="section-stack">
+        <div class="section-intro">
+          <h2>Audit Preparation</h2>
+          <p>Prepare for OCP inspections and regulatory audits.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Prepare all METRC records, logs, and manifests for inspection.</strong> <span class="citation">28-B §301</span></li>
+          <li><strong>Conduct mock audits to ensure readiness.</strong> <span class="citation">OCP Guidance</span></li>
+          <li><strong>Ensure sales, inventory, and transfer logs are accessible within minutes.</strong></li>
+          <li><strong>Retain all audit documentation for 2 years.</strong> <span class="citation">28-B §305</span></li>
+        </ul>
+      </section>
+      <section id="accessibility" class="section-stack">
+        <div class="section-intro">
+          <h2>Accessibility & Print Optimization</h2>
+          <p>All guides are WCAG AA compliant, print-optimized, and screen-reader friendly. Use skip links and keyboard navigation for fast access.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Skip links:</strong> <code>&lt;a href="#main" class="skip-link"&gt;Skip to content&lt;/a&gt;</code></li>
+          <li><strong>ARIA labels:</strong> All navigation and major sections are labeled for screen readers.</li>
+          <li><strong>Print optimization:</strong> Navigation suppressed, high-contrast layout, clear section breaks.</li>
+        </ul>
       </section>
 
       <section class="quick-launch" aria-labelledby="shift-management">
@@ -248,7 +324,7 @@
         <p class="mb-0 text-small">Log escalations, METRC variances, and training actions in a shared tracker so relief managers can pick up instantly.</p>
       </section>
 
-  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="../../index.html">MaineMarijuana.us</a> • v1.76 • Public reference archive • Not legal advice.</footer>
+  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="../../index.html">MaineMarijuana.us</a> • v1.77 • Public reference archive • Not legal advice.</footer>
     </main>
   </div>
 </body></html>

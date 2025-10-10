@@ -28,6 +28,7 @@
           <a href="../../tools.html">Tools</a>
           <a href="../../guidencedocs/index.html">OCP Docs</a>
         </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">☀️</button>
       </nav>
     </div>
   </header>
@@ -35,34 +36,37 @@
     <main id="main" tabindex="-1">
       <section class="hero hero--budtender" aria-labelledby="budtender-heading">
         <div class="hero__content">
-          <div class="status-pill">Budtender toolkit</div>
-          <h1 id="budtender-heading">Counter-Side Resources for Budtenders</h1>
-          <p class="hero__lead">Everything you need to provide excellent customer service while maintaining compliance. From product knowledge to transaction processing.</p>
+          <div class="status-pill">Maine Budtender Reference</div>
+          <h1 id="budtender-heading">Budtender Training & Compliance Hub</h1>
+          <p class="hero__lead">Comprehensive frontline guide for Maine cannabis retail staff. Covers daily workflow, compliance, customer service, product knowledge, incident handling, and escalation protocols. Built for print, mobile, and shift handoff.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#daily-checklist">Daily checklist</a>
-            <a class="btn btn--ghost" href="#customer-scripts">Customer scripts</a>
+            <a class="btn btn--primary" href="#daily-checklist">Daily Checklist</a>
+            <a class="btn btn--ghost" href="#compliance-duties">Compliance Duties</a>
+            <a class="btn btn--ghost" href="#customer-scripts">Customer Scripts</a>
+            <a class="btn btn--ghost" href="#incident-handling">Incident Handling</a>
+            <a class="btn btn--ghost" href="#product-knowledge">Product Knowledge</a>
           </div>
-          <p class="hero__note text-small">Pair these resources with the <a href="../compliance/compliance_guide.html">Retail Operations Playbook</a> for statutory citations and escalation paths.</p>
+          <p class="hero__note text-small">Pair these resources with the <a href="../compliance/compliance_guide.html">Retail Operations Playbook</a> and <a href="../../metrc/training/budtender-basics.html">METRC Budtender Training</a> for statutory citations and escalation paths.</p>
         </div>
       </section>
 
       <section class="quick-launch" aria-labelledby="daily-checklist">
         <div class="section-intro">
           <h2 id="daily-checklist">Daily Opening Checklist</h2>
-          <p>Essential tasks to complete before opening the doors.</p>
+          <p>Start every shift with these compliance-critical steps. Print for handoff.</p>
         </div>
         <div class="tile-grid tile-grid--three">
-          <article class="tile" data-search-item="opening checklist signage verification display requirements" data-topic="operations" data-kind="checklist">
+          <article class="tile" data-search-item="signage verification compliance display requirements" data-topic="operations" data-kind="checklist">
             <a class="tile__link" href="#signage-check" aria-label="Signage verification checklist"></a>
             <span class="tile__label">Signage</span>
             <h3>Signage Verification</h3>
-            <p>Confirm all required signs are posted, visible, and current.</p>
+            <p>Confirm all required signs are posted, visible, and current. <span class="citation">28-B §509</span></p>
           </article>
           <article class="tile" data-search-item="id verification equipment scanner testing backup procedures" data-topic="operations" data-kind="checklist">
             <a class="tile__link" href="#id-equipment" aria-label="ID equipment check"></a>
             <span class="tile__label">Equipment</span>
             <h3>ID Scanner Test</h3>
-            <p>Verify ID scanning equipment and backup procedures are working.</p>
+            <p>Verify ID scanning equipment and backup procedures are working. <span class="citation">28-B §504(4)</span></p>
           </article>
           <article class="tile" data-search-item="product knowledge daily specials promotions updates" data-topic="operations" data-kind="checklist">
             <a class="tile__link" href="#product-updates" aria-label="Product knowledge review"></a>
@@ -76,11 +80,97 @@
             <span class="tagline">First 5 minutes</span>
             <h3>Signage Verification</h3>
             <ul class="list-plain text-small">
-              <li>• Confirm required state postings at entrances and point-of-sale.</li>
+              <li>• Confirm required state postings at entrances and point-of-sale. <span class="citation">28-B §509</span></li>
               <li>• Replace damaged or outdated signage from the Print Center binder.</li>
+              <li>• Check for new OCP bulletins or rule changes.</li>
               <li>• Snap a photo for the shift log if anything is missing so management can replace it.</li>
             </ul>
           </article>
+          <article class="card" id="id-equipment">
+            <span class="tagline">First 5 minutes</span>
+            <h3>ID Scanner Test</h3>
+            <ul class="list-plain text-small">
+              <li>• Test ID scanner and backup manual log.</li>
+              <li>• Confirm all staff know acceptable ID types. <span class="citation">28-B §504(4)</span></li>
+              <li>• Review incident log for prior shift issues.</li>
+            </ul>
+          </article>
+          <article class="card" id="product-updates">
+            <span class="tagline">First 10 minutes</span>
+            <h3>Product Updates</h3>
+            <ul class="list-plain text-small">
+              <li>• Review daily specials, new products, and educational materials.</li>
+              <li>• Confirm all products are properly labeled and compliant. <span class="citation">28-B §701</span></li>
+              <li>• Check for recalls or compliance alerts.</li>
+            </ul>
+          </article>
+        </div>
+      <section id="compliance-duties" class="section-stack">
+        <div class="section-intro">
+          <h2>Compliance Duties</h2>
+          <p>Non-negotiable checkpoints for every transaction. Miss one and the sale stops.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Verify 21+ before engagement:</strong> Ask for ID prior to discussing product or ringing a sale. <span class="citation">28-B §504(4)(A)</span></li>
+          <li><strong>Acceptable ID only:</strong> Government-issued photo ID or options approved by rule; no expired documents. <span class="citation">28-B §504(4)(B)</span></li>
+          <li><strong>Total weight ≤ 2.5 oz:</strong> Combine flower, concentrates, infused products, and accessories that contain cannabis. <span class="citation">28-B §504(2)(B)</span></li>
+          <li><strong>Concentrate ≤ 10 g:</strong> Cartridges, dabs, oils, etc. share this cap, even if total weight is low. <span class="citation">28-B §1501(1)(B)</span></li>
+          <li><strong>Decline intoxicated customers:</strong> Stop the sale, document, notify leadership. <span class="citation">28-B §504(2)(D)</span></li>
+          <li><strong>Prohibited items:</strong> No mature plants, and no cannabis products combined with tobacco or alcohol. <span class="citation">28-B §504(2)(A)</span></li>
+          <li><strong>Human-operated only:</strong> No vending or unattended dispensing machines. <span class="citation">28-B §504(2)(C)(1)</span></li>
+        </ul>
+      </section>
+      <section id="customer-scripts" class="section-stack">
+        <div class="section-intro">
+          <h2>Customer Interaction Scripts</h2>
+          <p>Use these scripts for common scenarios. Keep responses short, cite the rule, and escalate as needed.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>ID check:</strong> “Hi! Before we get started, I’ll need to see a valid government-issued photo ID.” <span class="citation">28-B §504(4)</span></li>
+          <li><strong>Purchase limit explanation:</strong> “Maine law sets a maximum of 2.5 ounces total and 10 grams of concentrate per transaction. I’ll help you stay compliant.” <span class="citation">28-B §1501(1)(B)</span></li>
+          <li><strong>Declining a sale:</strong> “I’m sorry, I can’t complete this sale. If you have questions, my manager can explain the rules.” <span class="citation">28-B §504(2)(D)</span></li>
+          <li><strong>Product questions:</strong> “I can share product details, but I can’t make medical claims. For medical advice, please consult a healthcare professional.”</li>
+          <li><strong>Recalls or compliance alerts:</strong> “This product is currently under review. I’ll help you find a compliant alternative.”</li>
+        </ul>
+      </section>
+      <section id="incident-handling" class="section-stack">
+        <div class="section-intro">
+          <h2>Incident Handling & Escalation</h2>
+          <p>Follow these steps for common incidents. Document and escalate per SOP.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Failed ID scan:</strong> Log the incident, verify manually, and escalate to manager if unresolved. <span class="citation">28-B §504(4)</span></li>
+          <li><strong>Suspected diversion or theft:</strong> Document, notify manager, and report to OCP as required. <span class="citation">28-B §303</span></li>
+          <li><strong>Inventory discrepancy:</strong> Log, attempt reconciliation, escalate unresolved issues to manager and OCP. <span class="citation">28-B §105</span></li>
+          <li><strong>Customer dispute:</strong> Remain calm, cite the rule, and offer to escalate to management.</li>
+        </ul>
+      </section>
+      <section id="product-knowledge" class="section-stack">
+        <div class="section-intro">
+          <h2>Product Knowledge</h2>
+          <p>Stay current on product types, labeling, and compliance. Reference METRC and OCP guidance for details.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Flower:</strong> Whole or ground cannabis plant material. <span class="citation">28-B §701</span></li>
+          <li><strong>Concentrate:</strong> Extracted cannabinoids (oils, dabs, cartridges). <span class="citation">28-B §701</span></li>
+          <li><strong>Edible:</strong> Infused food or beverage. <span class="citation">28-B §703(1)(F)</span></li>
+          <li><strong>Infused product:</strong> Non-edible products containing cannabis (topicals, tinctures). <span class="citation">28-B §701</span></li>
+          <li><strong>Labeling:</strong> License number, batch ID, net weight, potency, universal symbol, warnings. <span class="citation">28-B §701</span></li>
+        </ul>
+      </section>
+      <section id="accessibility" class="section-stack">
+        <div class="section-intro">
+          <h2>Accessibility & Print Optimization</h2>
+          <p>All guides are WCAG AA compliant, print-optimized, and screen-reader friendly. Use skip links and keyboard navigation for fast access. This section provides explicit instructions for accessibility and print layout, ensuring every budtender can use these resources regardless of device or ability.</p>
+        </div>
+        <ul class="data-list">
+          <li><strong>Skip links:</strong> Always include <code>&lt;a href="#main" class="skip-link"&gt;Skip to content&lt;/a&gt;</code> at the top of every page for keyboard and screen reader navigation.</li>
+          <li><strong>ARIA labels:</strong> Use <code>aria-label</code> for navigation, breadcrumbs, and major sections. Example: <code>&lt;nav aria-label="Primary"&gt;</code> and <code>&lt;nav class="breadcrumbs" aria-label="Breadcrumb"&gt;</code>.</li>
+          <li><strong>Heading hierarchy:</strong> Use semantic headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) for logical structure and screen reader compatibility.</li>
+          <li><strong>Print optimization:</strong> Suppress navigation in print view, use high-contrast layout, and clear section breaks. Example: <code>@media print { .site-header, .nav { display: none; } }</code></li>
+          <li><strong>Keyboard navigation:</strong> Ensure all interactive elements are reachable via <code>Tab</code> and have visible focus states.</li>
+        </ul>
+      </section>
           <article class="card" id="id-equipment">
             <span class="tagline">Before doors open</span>
             <h3>ID Scanner Test</h3>
@@ -228,7 +318,7 @@
         <p class="mb-0 text-small">Log over-limit conversations, product feedback, and training needs in the shift handoff. Share trends with management for playbook updates.</p>
       </section>
 
-  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="../../index.html">MaineMarijuana.us</a> • v1.76 • Public reference archive • Not legal advice.</footer>
+  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="../../index.html">MaineMarijuana.us</a> • v1.77 • Public reference archive • Not legal advice.</footer>
     </main>
   </div>
 </body></html>

@@ -62,7 +62,7 @@ Known behaviors:
 - Color fidelity depends on “Background graphics” being enabled in the browser’s print dialog.
 
 ## Versioning
-- All footers currently display `v1.76`.
+- All footers currently display `v1.77`.
 - Increment the version string when:
    - Policies change materially (new limits, rules, or procedures), or
    - Layout / navigation shifts that affect documentation.

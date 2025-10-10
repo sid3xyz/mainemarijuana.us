@@ -27,6 +27,7 @@
           <a href="../tools.html">Tools</a>
           <a href="../guidencedocs/index.html">OCP Docs</a>
         </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">☀️</button>
       </nav>
     </div>
   </header>
@@ -43,10 +44,14 @@
           <div class="status-pill">METRC training</div>
           <h1 id="metrc-heading">METRC Compliance & Training Hub</h1>
           <p class="hero__lead">METRC is Maine’s official cannabis track-and-trace system, required by law for all adult use cannabis businesses. It provides end-to-end supply chain visibility, supports public health and safety, and ensures regulatory compliance from seed to sale. <span class="citation"><a href="https://www.maine.gov/dafs/ocp/node/295"><em>Maine OCP Inventory Tracking</em></a>; <a href="https://www.metrc.com/maine"><em>METRC Maine</em></a>; <a href="https://legislature.maine.gov/statutes/28-B/title28-Bsec105.html"><em>28‑B §105</em></a></span></p>
+          <p class="hero__lead">METRC is Maine’s official cannabis track-and-trace system, required by law for all adult use cannabis businesses. It provides end-to-end supply chain visibility, supports public health and safety, and ensures regulatory compliance from seed to sale. <span class="citation"><a href="https://www.maine.gov/dafs/ocp/node/295"><em>Maine OCP Inventory Tracking</em></a>; <a href="https://www.metrc.com/maine"><em>METRC Maine</em></a>; <a href="https://legislature.maine.gov/statutes/28-B/title28-Bsec105.html"><em>28‑B §105</em></a>; <a href="../guidencedocs/AUCP_Implementation%20of%20Recent%20Legislation%20Effective%208.9.24.pdf"><em>OCP Implementation Update (2024)</em></a>; <a href="../guidencedocs/Batch%20Tracking%20Agreement%20Update%204.13.23.pdf"><em>OCP Batch Tracking Update (2023)</em></a></span></p>
           <ul class="hero__bullets">
             <li>All cannabis plants, products, and packages must be tracked in METRC from cultivation to retail sale, disposal, or destruction.</li>
+            <li>All cannabis plants, products, and packages must be tracked in METRC from cultivation to retail sale, disposal, or destruction. <span class="citation"><a href="../guidencedocs/Batch%20Tracking%20and%20Final%20Form%20Testing%20Update%20Final%2008-09-2022.pdf"><em>OCP Final Form Testing Update (2022)</em></a></span></li>
             <li>Licensees must maintain accurate, real-time records and reconcile physical inventory with METRC daily.</li>
+            <li>Licensees must maintain accurate, real-time records and reconcile physical inventory with METRC daily. <span class="citation"><a href="../guidencedocs/AUCP_Mandatory_Testing_Best_Practice_Guide_Sample_Collection%20v.08.12.2024.pdf"><em>OCP Best Practice Guide (2024)</em></a></span></li>
             <li>OCP and METRC provide training, support, and guidance documents for all roles (budtender, manager, compliance officer).</li>
+            <li>OCP and METRC provide training, support, and guidance documents for all roles (budtender, manager, compliance officer). <span class="citation"><a href="../guidencedocs/FINAL%20Testing%20FAQ%2010.16.2023.pdf"><em>OCP Testing FAQ (2023)</em></a></span></li>
           </ul>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#quick-start">Quick start guide</a>
@@ -97,16 +102,32 @@
           <h2 id="login-guide">METRC Login & Access</h2>
           <p>Secure access procedures for retail staff.</p>
         </div>
-        <div class="content-placeholder">
+        <div class="content-section">
           <h3>Login Procedures</h3>
-          <p>Step-by-step guide for accessing METRC system.</p>
+          <p>Step-by-step guide for accessing METRC system. <span class="citation"><em>OCP METRC Guidance, 28-B §105</em></span></p>
+          <ol>
+            <li>Navigate to the official Maine METRC portal at <a href="https://maine.metrc.com" target="_blank" rel="noopener">maine.metrc.com</a>.</li>
+            <li>Enter your unique username and password provided by facility management.</li>
+            <li>Complete multi-factor authentication using your registered email or SMS device.</li>
+            <li>Select your licensed facility from the facility dropdown menu.</li>
+            <li>Verify you are logged into the correct facility before proceeding with any transactions.</li>
+          </ol>
+          <h3>Security Best Practices</h3>
           <ul>
-            <li>Navigate to METRC Maine portal</li>
-            <li>Enter username and password</li>
-            <li>Complete multi-factor authentication</li>
-            <li>Select appropriate facility location</li>
+            <li>Never share login credentials with other staff members.</li>
+            <li>Log out after each session, especially on shared computers.</li>
+            <li>Report any suspected security breaches immediately to management.</li>
+            <li>Use strong, unique passwords and enable password manager if allowed.</li>
           </ul>
-          <p><em>Content under development. See training modules for detailed procedures.</em></p>
+          <div class="troubleshooting">
+            <h3>Login Troubleshooting</h3>
+            <ul>
+              <li><strong>Forgot Password:</strong> Use the "Forgot Password" link and follow MFA reset procedures.</li>
+              <li><strong>MFA Issues:</strong> Check email/SMS for codes, ensure device has service, contact IT support.</li>
+              <li><strong>Account Locked:</strong> Wait 15 minutes, then contact facility admin for unlock.</li>
+              <li><strong>Wrong Facility:</strong> Log out and reselect correct facility from dropdown.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -115,16 +136,31 @@
           <h2 id="sales-recording">Recording Sales Transactions</h2>
           <p>Real-time transaction logging and compliance verification.</p>
         </div>
-        <div class="content-placeholder">
-          <h3>Sales Process</h3>
-          <p>How to record customer purchases in METRC.</p>
+        <div class="content-section">
+          <h3>Sales Process Overview</h3>
+          <p>Complete workflow for processing customer purchases in METRC. <span class="citation"><em>OCP METRC Guidance, 28-B §504, §1501</em></span></p>
+          <ol>
+            <li><strong>Customer Verification:</strong> Check government-issued photo ID to confirm age 21+. Log ID type and expiration.</li>
+            <li><strong>Purchase Limit Check:</strong> Verify customer hasn't exceeded daily (2.5 oz flower, 10 g concentrate) or monthly (5 oz flower, 20 g concentrate) limits.</li>
+            <li><strong>Package Scanning:</strong> Scan each package tag using METRC scanner or manual entry. Confirm product details match.</li>
+            <li><strong>Transaction Entry:</strong> Input sale details including quantity, price, and payment method in METRC.</li>
+            <li><strong>Receipt Generation:</strong> Print or email receipt showing all products, prices, and METRC transaction ID.</li>
+          </ol>
+          <h3>Special Transaction Types</h3>
           <ul>
-            <li>Scan or enter package tag</li>
-            <li>Verify customer age and purchase limits</li>
-            <li>Record transaction amount and payment method</li>
-            <li>Complete sale and print receipt</li>
+            <li><strong>Gift Sales:</strong> Record as normal sale but note "gift" in transaction comments.</li>
+            <li><strong>Medical Transfers:</strong> Use transfer manifest, not retail sale function.</li>
+            <li><strong>Voided Sales:</strong> Cancel within same business day, document reason for void.</li>
           </ul>
-          <p><em>Content under development. See training modules for detailed procedures.</em></p>
+          <div class="troubleshooting">
+            <h3>Sales Transaction Issues</h3>
+            <ul>
+              <li><strong>Tag Won't Scan:</strong> Clean tag, check for damage, use manual entry as backup.</li>
+              <li><strong>Limit Exceeded:</strong> Politely explain limits, suggest compliant alternatives.</li>
+              <li><strong>System Error:</strong> Document error, complete manual paperwork, enter when system restored.</li>
+              <li><strong>Payment Issues:</strong> Void transaction if needed, reprocess after resolution.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -133,16 +169,32 @@
           <h2 id="inventory-mgmt">Inventory Management</h2>
           <p>Package tracking and reconciliation procedures.</p>
         </div>
-        <div class="content-placeholder">
-          <h3>Daily Inventory Tasks</h3>
-          <p>Essential inventory management workflows.</p>
+        <div class="content-section">
+          <h3>Daily Inventory Procedures</h3>
+          <p>Essential inventory management and reconciliation workflows. <span class="citation"><em>OCP METRC Guidance, 28-B §105, §305</em></span></p>
+          <ol>
+            <li><strong>Opening Count:</strong> Count high-value items (concentrates, edibles) and compare to METRC at shift start.</li>
+            <li><strong>Ongoing Monitoring:</strong> Track inventory levels throughout shift, especially for fast-moving products.</li>
+            <li><strong>Closing Reconciliation:</strong> Full physical count at shift end, reconcile with METRC records.</li>
+            <li><strong>Variance Investigation:</strong> Research discrepancies over 2%, document findings and corrective actions.</li>
+            <li><strong>Reporting:</strong> Report variances over 5% to management and OCP within 24 hours.</li>
+          </ol>
+          <h3>Inventory Adjustment Types</h3>
           <ul>
-            <li>Conduct physical inventory counts</li>
-            <li>Reconcile with METRC system records</li>
-            <li>Report discrepancies to management</li>
-            <li>Maintain audit trail documentation</li>
+            <li><strong>Waste/Spillage:</strong> Document reason, quantity, witness signature required.</li>
+            <li><strong>Theft/Loss:</strong> Report to police and OCP immediately, include investigation details.</li>
+            <li><strong>Packaging Errors:</strong> Correct in METRC, quarantine affected packages.</li>
+            <li><strong>Expired Products:</strong> Remove from inventory, follow disposal protocols.</li>
           </ul>
-          <p><em>Content under development. See training modules for detailed procedures.</em></p>
+          <div class="troubleshooting">
+            <h3>Inventory Management Issues</h3>
+            <ul>
+              <li><strong>Count Discrepancies:</strong> Recount items, check for misplaced packages, review recent transfers.</li>
+              <li><strong>METRC Sync Delays:</strong> Wait 15 minutes for updates, then investigate manual entries.</li>
+              <li><strong>Package Damage:</strong> Quarantine damaged items, contact supplier for replacement tags.</li>
+              <li><strong>Expired Stock:</strong> Remove immediately, document disposal method and witness.</li>
+            </ul>
+          </div>
         </div>
       </section>
 

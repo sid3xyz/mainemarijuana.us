@@ -43,12 +43,7 @@ Welcome to the electric Kool-Aid acid test of static site development, where we'
 - **Scrollspy**: Update active TOC links on scroll with 120px header offset - spy vs spy in the scrolling wars
 
 ## Content Guidelines
-- **Statutory citations** in italics: "*22 M.R.S. § 2423*" - cite your sources or face the wrath of the law
-- **Version numbering** in footers (current: v1.76) - bump on policy/layout changes - version control is your friend
-- **Purchase limits**: 2.5 oz aggregate, 10g concentrate sub-limit, entire edible weight counts - know the numbers or go to jail
-- **Accessibility**: WCAG AA compliance, skip links, proper heading hierarchy - make it work for everyone
-- **Print focus**: Navigation suppressed, light scheme for print compatibility - because sometimes you need dead trees
-
+ - **Standing Order**: Always include a dedicated accessibility & print optimization section in every role-specific guide, with explicit skip link, ARIA, and print layout instructions.
 ## File Organization
 - **Flat structure** - all HTML files in root, shared assets - no deep directory trees of despair
 - **Relative paths** for CSS/JS: `href="styles.css"` from root, `href="../styles.css"` from subdirs - keep it relative, keep it real
@@ -81,4 +76,4 @@ Welcome to the electric Kool-Aid acid test of static site development, where we'
 
 *This gonzo guide to the MaineMarijuana.us codebase was written in the spirit of Hunter S Thompson's fearless journalism - diving deep into the heart of the cannabis compliance machine. Remember, this is not legal advice - consult the Maine Office of Cannabis Policy for official guidance. Stay weird, stay compliant.*
 
-© 2024 sid3.xyz • MaineMarijuana.us • v1.76 • Public reference archive • Not legal advice
+© 2024 sid3.xyz • MaineMarijuana.us • v1.77 • Public reference archive • Not legal advice
