@@ -1,0 +1,851 @@
+/* MaineMarijuana.us – Print-first shared styles */
+:root {
+  --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --color-text: #1a1f1c;
+  --color-muted: #4d5a54;
+  --color-accent: #176f4b;
+  --color-accent-soft: #e4f0ea;
+  --color-warning: #9f2a2a;
+  --color-warning-soft: #f8e8e6;
+  --color-surface: #ffffff;
+  --color-surface-outer: #f3f5f4;
+  --color-border: #ccd6d1;
+  --color-border-strong: #9fb5aa;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-soft: 0 14px 32px rgba(23, 38, 31, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface-outer);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.print-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.75rem;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.print-toolbar h1,
+.print-toolbar h2,
+.print-toolbar h3 {
+  margin: 0;
+}
+
+.print-toolbar .toolbar-link {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.print-toolbar .toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-print,
+.btn-secondary {
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-print:hover,
+.btn-print:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(23, 111, 75, 0.15);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-accent);
+}
+
+.print-wrapper {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.print-page {
+  width: 100%;
+  max-width: 8.5in;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.4rem 2.4rem;
+  box-shadow: var(--shadow-soft);
+}
+
+section,
+article,
+aside {
+  margin: 0;
+}
+
+.state-seal {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: 0.9rem;
+}
+
+.reference-header {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: 0.9rem;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--color-border-strong);
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.65rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 1rem 0 0.45rem;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul,
+ol {
+  margin: 0 0 1.1rem 1.4rem;
+  padding: 0;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.text-small {
+  font-size: 0.78rem;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.screen-only {
+  display: block;
+}
+
+.screen-breadcrumbs-wrap {
+  align-self: stretch;
+  max-width: 8.5in;
+}
+
+/* Screen-only breadcrumb styling for print catalog shell */
+.breadcrumbs {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.6rem;
+  align-items: center;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.breadcrumbs li+li::before {
+  content: "›";
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.callout {
+  position: relative;
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 1.1rem 1.2rem 1.1rem 1.5rem;
+  border-radius: var(--radius-md);
+  margin: 1.6rem 0;
+}
+
+.callout[data-label]::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -0.7rem;
+  left: 1.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.callout ul,
+.callout ol {
+  margin-left: 1rem;
+}
+
+.citation {
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  margin: 1.2rem 0;
+}
+
+.table-scroll table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+  font-size: 0.88rem;
+}
+
+.table-scroll th,
+.table-scroll td,
+.testing-table th,
+.testing-table td {
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table-scroll th,
+.testing-table th {
+  background: #eef3f0;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.testing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4rem 0;
+}
+
+.verification-steps ol {
+  margin-left: 1.2rem;
+}
+
+.acceptable-id ul {
+  columns: 2;
+  column-gap: 1.8rem;
+}
+
+@media (max-width: 720px) {
+  .acceptable-id ul {
+    columns: 1;
+  }
+}
+
+.limit-grid,
+.testing-grid,
+.child-resistant-grid,
+.rules-grid,
+.badge-examples,
+.warning-grid {
+  display: grid;
+  gap: 1.4rem;
+  margin: 1.5rem 0;
+}
+
+.limit-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.testing-grid,
+.child-resistant-grid,
+.badge-examples,
+.rules-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.warning-grid {
+  grid-template-columns: 1fr;
+}
+
+.limit-block,
+.testing-card,
+.child-resistant-box,
+.badge-example {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fbfcfb;
+  padding: 1.3rem 1.4rem;
+}
+
+.limit-block h3,
+.testing-card h3,
+.child-resistant-box h4,
+.badge-example h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+.limit-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
+
+.limit-equiv {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.limit-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.scenarios h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+}
+
+.warning-box {
+  border: 2px solid var(--color-warning);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-warning-soft);
+}
+
+.warning-title {
+  margin: 0;
+  background: var(--color-warning);
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.warning-content {
+  padding: 1.2rem 1.4rem;
+}
+
+.prohibited-list,
+.required-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.prohibited-list li,
+.required-list li {
+  position: relative;
+  margin-bottom: 1.2rem;
+  padding-left: 2.45rem;
+}
+
+.prohibited-list li::before,
+.required-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.prohibited-list li::before {
+  content: "✕";
+  border: 2px solid var(--color-warning);
+  color: var(--color-warning);
+}
+
+.required-list li::before {
+  content: "✓";
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.badge-image {
+  width: 170px;
+  height: 220px;
+  border: 1px dashed var(--color-border-strong);
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+.badge-do,
+.badge-dont {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge-do::before,
+.badge-dont::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+.badge-do::before {
+  content: "✓";
+  color: var(--color-accent);
+}
+
+.badge-dont::before {
+  content: "✕";
+  color: var(--color-warning);
+}
+
+.checklist-section {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.4rem;
+  margin: 1.4rem 0;
+  background: #fbfcfb;
+}
+
+.checklist-section h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.6rem;
+}
+
+.checklist-items {
+  margin-top: 0.9rem;
+}
+
+.checklist-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.55rem;
+}
+
+.checklist-item input[type="checkbox"] {
+  margin: 0.2rem 0 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+.child-resistant-box h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+.footnote {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* DOB Calculator styles for age verification */
+.dob-calculator {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.dob-calculator-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dob-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: var(--color-accent);
+}
+
+.dob-updated {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
+.print-footer {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  text-align: center;
+  padding: 1.5rem 1rem 3rem;
+  display: none; /* hidden on screen; enabled in print */
+}
+
+/* Catalog list styles (screen) */
+.catalog-intro {
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.filter-input {
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.resource-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  border: 1px solid var(--color-border);
+  background: #fbfcfb;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.resource-item .preview {
+  width: 120px;
+  height: 160px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.resource-item h3 { margin: 0 0 0.35rem; }
+
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+}
+
+.meta-chips span {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: #fff;
+}
+
+.resource-actions { margin-top: 0.6rem; }
+.resource-actions a { font-weight: 600; }
+
+@media (max-width: 680px) {
+  .resource-item { grid-template-columns: 1fr; }
+  .resource-item .preview { width: 100px; height: 130px; margin: 0 auto; }
+}
+
+/* Print pagination strategy
+  - Use @page for Letter + 0.5in margins (works across modern browsers)
+   - Disable flex/grid in wrappers so content flows naturally across pages
+   - Provide utility classes:
+     .page-break / .page-break-before => force new page before
+     .page-break-after               => force new page after
+     .avoid-break-inside             => keep element intact
+   - Keep headings with following content (break-after: avoid)
+   - Avoid splitting tables, cards, and callouts; repeat thead/tfoot
+   - Hide site footer and toolbar when printing
+*/
+@media print {
+  /* Hide screen-only elements */
+  .print-toolbar,
+  .screen-only,
+  .footer {
+    display: none !important;
+  }
+
+  /* Reset wrappers for clean flow */
+  .print-wrapper {
+    padding: 0; /* No extra padding; rely on @page margins */
+    /* Flex containers fragment poorly across pages; revert to block for print */
+    display: block !important;
+  }
+
+  /* Suppress old single-page footer */
+  .print-page::after {
+    content: none !important;
+  }
+
+  /* Define per-page layout (explicit US Letter) */
+  @page {
+    size: 8.5in 11in; /* US Letter explicit size */
+    margin: 0.5in;    /* Safe printable margin for most desktop printers */
+  }
+
+  /* Cross-browser fragmentation controls */
+  /* Utilities */
+  .page-break,
+  .page-break-before { break-before: page; page-break-before: always; }
+  .page-break-after { break-after: page; page-break-after: always; }
+  .avoid-break-inside { break-inside: avoid; page-break-inside: avoid; }
+  .avoid-break-before { break-before: avoid; }
+  .avoid-break-after { break-after: avoid; }
+
+  /* Keep headings with the content that follows */
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+
+  /* Avoid splitting common blocks */
+  .callout,
+  .checklist-section,
+  .warning-box,
+  .limit-block,
+  .testing-card,
+  .child-resistant-box,
+  .badge-example,
+  table,
+  .table-scroll,
+  .acceptable-id ul,
+  ul,
+  ol {
+    break-inside: avoid; /* Modern */
+    page-break-inside: avoid; /* Legacy alias */
+  }
+
+  /* Keep checklist items together when possible */
+  .checklist-items,
+  .checklist-item { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Tame complex layout containers that fragment poorly */
+  .limit-grid,
+  .testing-grid,
+  .child-resistant-grid,
+  .badge-examples,
+  .rules-grid,
+  .warning-grid {
+    display: block !important; /* Disable CSS Grid in print to allow natural page flow */
+  }
+  .limit-grid > *,
+  .testing-grid > *,
+  .child-resistant-grid > *,
+  .badge-examples > *,
+  .rules-grid > *,
+  .warning-grid > * {
+    break-inside: avoid; page-break-inside: avoid; margin-bottom: 1rem;
+  }
+
+  /* Multi-column lists can behave unpredictably across page boundaries. 
+     Keep per-item content intact and prefer flowing to next page. */
+  .acceptable-id ul li { break-inside: avoid; page-break-inside: avoid; }
+  .acceptable-id ul { columns: 1 !important; }
+
+  /* Tables: repeat headers/footers and avoid splitting rows */
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+  tr, th, td { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Keep media and captions together */
+  figure, img { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Typography safeguards (guarded by @supports for cross-browser linting) */
+  @supports (orphans: 2) {
+    p, li { orphans: 2; }
+  }
+  @supports (widows: 2) {
+    p, li { widows: 2; }
+  }
+
+  body {
+    background: #fff !important;
+    -webkit-print-color-adjust: exact; /* Better fidelity in WebKit */
+    print-color-adjust: exact;         /* Standardized property */
+  }
+
+  /* Ensure media fits within printable area */
+  img, svg, canvas { max-width: 100% !important; height: auto !important; }
+  table { width: 100% !important; max-width: 100% !important; table-layout: auto; }
+  td, th { overflow-wrap: anywhere; word-break: break-word; }
+
+  .print-page {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  /* Start each .print-page on a new sheet when multiple are present */
+  .print-page + .print-page { break-before: page; page-break-before: always; }
+
+  /* Ensure tables are not clipped */
+  .table-scroll { overflow: visible !important; }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .callout {
+    background: #f2f5f3 !important;
+  }
+
+  .callout[data-label]::before {
+    background: #333;
+  }
+}
+
+/* Accessibility utilities */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Elements that should only appear on printed output */
+.print-only { display: none; }
+@media print { .print-only { display: block !important; } }

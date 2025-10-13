@@ -1,0 +1,239 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Search the Hub | Medical Program</title>
+  <meta name="description" content="Search guides, tools, statutes, and resources across the Maine cannabis retail compliance hub." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <meta name="robots" content="index, follow" />
+</head>
+<body data-page="portal-section">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="MaineMarijuana.us home">
+        <span class="brand__wordmark">MaineMarijuana.us</span>
+        <span class="brand__tagline">Cannabis retail compliance hub</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="resources/index.html">Print Center</a>
+          <a href="guides/budtender/index.html">Budtenders</a>
+          <a href="guides/manager/index.html">Managers</a>
+          <a href="metrc/index.html">METRC</a>
+          <a href="tools.html">Tools</a>
+          <a href="guidencedocs/index.html">DHHS Docs</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="site-shell single-column">
+    <main id="main" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Search</li>
+        </ol>
+      </nav>
+      <section class="hero" aria-labelledby="search-title">
+        <div class="hero__content">
+          <div class="status-pill">Find it fast</div>
+          <h1 id="search-title">Search the Hub</h1>
+          <p class="hero__lead">Find guides, statutes, and tools by keyword, topic, or content type.</p>
+        </div>
+      </section>
+
+      <section class="module module--search" aria-label="Search compliance resources">
+        <div class="module__surface">
+          <div class="module__header">
+            <h2>Search</h2>
+            <p>Try “purchase limit”, “ID checklist”, or “Title 22”.</p>
+          </div>
+          <label class="sr-only" for="resource-search">Search the hub</label>
+          <div class="search-field">
+            <input type="search" id="resource-search" class="search-input large" placeholder="Type to search…" autocomplete="off" spellcheck="false" />
+            <div id="search-suggestions" class="search-suggestions hidden" role="listbox" aria-label="Suggested searches"></div>
+          </div>
+          <div class="search-meta">
+            <span><strong id="search-count">0</strong> results</span>
+            <span>Filter by topic or content type below</span>
+          </div>
+          <div class="facet-bar" aria-label="Filter resources">
+            <div class="facet-group">
+              <span class="facet-label">Topic</span>
+              <div class="facet-chips" role="group" aria-label="Topic filters">
+                <button type="button" class="facet-chip is-active" data-facet-topic="all" aria-pressed="true">All topics</button>
+                <button type="button" class="facet-chip" data-facet-topic="id" aria-pressed="false">ID checks</button>
+                <button type="button" class="facet-chip" data-facet-topic="purchase" aria-pressed="false">Purchase math</button>
+                <button type="button" class="facet-chip" data-facet-topic="packaging" aria-pressed="false">Packaging</button>
+                <button type="button" class="facet-chip" data-facet-topic="prohibited" aria-pressed="false">Prohibited sales</button>
+                <button type="button" class="facet-chip" data-facet-topic="conduct" aria-pressed="false">In-store</button>
+                <button type="button" class="facet-chip" data-facet-topic="faq" aria-pressed="false">Customer FAQs</button>
+                <button type="button" class="facet-chip" data-facet-topic="statute" aria-pressed="false">Statute</button>
+                <button type="button" class="facet-chip" data-facet-topic="guidance" aria-pressed="false">DHHS docs</button>
+                <button type="button" class="facet-chip" data-facet-topic="metrc" aria-pressed="false">METRC</button>
+                <button type="button" class="facet-chip" data-facet-topic="staff" aria-pressed="false">Staff training</button>
+                <button type="button" class="facet-chip" data-facet-topic="management" aria-pressed="false">Management</button>
+                <button type="button" class="facet-chip" data-facet-topic="signage" aria-pressed="false">Signage</button>
+              </div>
+            </div>
+            <div class="facet-group">
+              <span class="facet-label">Type</span>
+              <div class="facet-chips" role="group" aria-label="Content type filters">
+                <button type="button" class="facet-chip is-active" data-facet-kind="all" aria-pressed="true">All types</button>
+                <button type="button" class="facet-chip" data-facet-kind="guide" aria-pressed="false">Guides</button>
+                <button type="button" class="facet-chip" data-facet-kind="summary" aria-pressed="false">Summaries</button>
+                <button type="button" class="facet-chip" data-facet-kind="statute" aria-pressed="false">Statute</button>
+                <button type="button" class="facet-chip" data-facet-kind="tool" aria-pressed="false">Tools</button>
+                <button type="button" class="facet-chip" data-facet-kind="training" aria-pressed="false">Training</button>
+                <button type="button" class="facet-chip" data-facet-kind="printable" aria-pressed="false">Printables</button>
+                <button type="button" class="facet-chip" data-facet-kind="documents" aria-pressed="false">Documents</button>
+              </div>
+            </div>
+          </div>
+          <div id="direct-answer" class="direct-answer hidden" aria-live="polite"></div>
+          <div id="search-empty" class="empty-results hidden">No matches. Try different keywords.</div>
+        </div>
+      </section>
+
+      <section class="section-stack" aria-labelledby="results-title">
+        <div class="section-intro">
+          <h2 id="results-title">All resources</h2>
+          <p>Filter by keyword, topic, or type. Results update instantly.</p>
+        </div>
+        <div class="tile-grid tile-grid--wrap">
+          <article class="tile tile--primary" data-search-item="quick start setup onboarding open store" data-topic="operations" data-kind="guide">
+            <a class="tile__link" href="quick-start.html" aria-label="Quick Start for New Retailers"></a>
+            <span class="tile__label">Start here</span>
+            <h3>Quick Start</h3>
+            <p>Essential first steps to get compliant and operational.</p>
+          </article>
+
+          <article class="tile" data-search-item="print center signs posters checklists required signage compliance" data-topic="signage" data-kind="printable">
+            <a class="tile__link" href="resources/index.html" aria-label="Printable signs and resources"></a>
+            <span class="tile__label">Print center</span>
+            <h3>Required Signage &amp; Posters</h3>
+            <p>All mandatory signs, warning notices, and staff reference materials.</p>
+          </article>
+
+          <article class="tile" data-search-item="download statute pdf title 28-b law" data-topic="statute" data-kind="documents">
+            <a class="tile__link" href="downloads.html" aria-label="Download Center"></a>
+            <span class="tile__label">Downloads</span>
+            <h3>Download Center</h3>
+            <p>Title 28‑B full statute and key chapter excerpts.</p>
+          </article>
+
+          <article class="tile tile--outline" data-search-item="state resources ocp official guidance licensing testing" data-topic="regulatory" data-kind="documents">
+            <a class="tile__link" href="state-resources.html" aria-label="State Resources"></a>
+            <span class="tile__label">Regulatory</span>
+            <h3>State Resources</h3>
+            <p>Official DHHS announcements, licensing, and testing.</p>
+          </article>
+
+          <article class="tile" data-search-item="purchase limit calculator tool compliance weight tracking" data-topic="purchase" data-kind="tool">
+            <a class="tile__link" href="tools.html#purchase-calculator" aria-label="Purchase limit calculator"></a>
+            <span class="tile__label">Calculator</span>
+            <h3>Purchase Limit Tool</h3>
+            <p>Real-time weight tracking and compliance verification.</p>
+          </article>
+
+          <article class="tile" data-search-item="budtender training guide customer service sales" data-topic="staff" data-kind="training">
+            <a class="tile__link" href="guides/budtender/index.html" aria-label="Budtender training guide"></a>
+            <span class="tile__label">Budtender</span>
+            <h3>Budtender Training</h3>
+            <p>Front-line procedures, product knowledge, and sales steps.</p>
+          </article>
+
+          <article class="tile" data-search-item="manager training guide leadership operations compliance" data-topic="management" data-kind="training">
+            <a class="tile__link" href="guides/manager/index.html" aria-label="Manager training guide"></a>
+            <span class="tile__label">Manager</span>
+            <h3>Manager Training</h3>
+            <p>Operational oversight and compliance management.</p>
+          </article>
+
+          <article class="tile tile--glow" data-search-item="metrc training quick reference inventory tracking" data-topic="metrc" data-kind="training">
+            <a class="tile__link" href="metrc/index.html" aria-label="METRC training hub"></a>
+            <span class="tile__label">METRC</span>
+            <h3>METRC Training &amp; Resources</h3>
+            <p>Tracking system basics, training modules, and quick references.</p>
+          </article>
+
+          <article class="tile" data-search-item="compliance playbook operations procedures training" data-topic="compliance" data-kind="guide">
+            <a class="tile__link" href="guides/compliance/compliance_guide.html" aria-label="Retail operations playbook"></a>
+            <span class="tile__label">Operations</span>
+            <h3>Retail Playbook</h3>
+            <p>Complete operations manual with citations and SOPs.</p>
+          </article>
+
+          <article class="tile" data-search-item="title 28-b summary regulations overview" data-topic="statute" data-kind="summary">
+            <a class="tile__link" href="guides/compliance/summary-title28-b.html" aria-label="Title 22 statute summary"></a>
+            <span class="tile__label">Statute</span>
+            <h3>Title 28‑B Overview</h3>
+            <p>Plain-language overview of Maine's adult‑use cannabis laws.</p>
+          </article>
+
+          <article class="tile" data-search-item="sales duties id check prohibited intoxication" data-topic="id" data-kind="guide">
+            <a class="tile__link" href="guides/compliance/sales-core-duties.html" aria-label="Sales core duties"></a>
+            <span class="tile__label">Checkpoint</span>
+            <h3>Sales: Core Duties</h3>
+            <p>ID checks, limits, and prohibited sales.</p>
+          </article>
+
+          <article class="tile" data-search-item="purchase limits ounces grams concentrate cap" data-topic="purchase" data-kind="guide">
+            <a class="tile__link" href="guides/compliance/purchase-limits.html" aria-label="Purchase limits"></a>
+            <span class="tile__label">Limits</span>
+            <h3>Purchase Limits</h3>
+            <p>Apply aggregate and concentrate caps with examples.</p>
+          </article>
+
+          <article class="tile" data-search-item="packaging labeling universal symbol warnings child resistant" data-topic="packaging" data-kind="guide">
+            <a class="tile__link" href="guides/compliance/packaging-labeling.html" aria-label="Packaging and labeling"></a>
+            <span class="tile__label">Packaging</span>
+            <h3>Packaging &amp; Labeling</h3>
+            <p>Mandatory packaging and label content requirements.</p>
+          </article>
+
+          <article class="tile" data-search-item="on premises conduct rules access postings" data-topic="conduct" data-kind="guide">
+            <a class="tile__link" href="guides/compliance/on-premises-conduct.html" aria-label="On‑premises conduct"></a>
+            <span class="tile__label">In‑store</span>
+            <h3>On‑Premises Conduct</h3>
+            <p>In‑store rules, access, and required postings.</p>
+          </article>
+
+          <article class="tile" data-search-item="faq consumer purchase possession travel storage" data-topic="faq" data-kind="guide">
+            <a class="tile__link" href="guides/compliance/post-purchase-faq.html" aria-label="After‑purchase FAQs"></a>
+            <span class="tile__label">Customer</span>
+            <h3>After‑Purchase FAQs</h3>
+            <p>Short answers with citations for common questions.</p>
+          </article>
+
+          <article class="tile" data-search-item="licensed retailers dispensaries directory consumer find stores" data-topic="directory" data-kind="consumer">
+            <a class="tile__link" href="retailers.html" aria-label="Licensed Retailers Directory"></a>
+            <span class="tile__label">Consumer</span>
+            <h3>Licensed Retailers</h3>
+            <p>Find licensed dispensaries and adult-use cannabis retailers.</p>
+          </article>
+
+          <article class="tile tile--outline" data-search-item="ocp guidance documents bulletins regulatory updates" data-topic="guidance" data-kind="documents">
+            <a class="tile__link" href="guidencedocs/index.html" aria-label="DHHS guidance library"></a>
+            <span class="tile__label">Regulatory</span>
+            <h3>DHHS Guidance Library</h3>
+            <p>Official bulletins, testing requirements, and updates.</p>
+          </article>
+
+          <article class="tile tile--outline" data-search-item="essential resources tools documents library" data-topic="operations" data-kind="guide">
+            <a class="tile__link" href="essential-resources.html" aria-label="Essential resources"></a>
+            <span class="tile__label">Core set</span>
+            <h3>Essential Resources</h3>
+            <p>Core tools and documents used every day.</p>
+          </article>
+        </div>
+      </section>
+
+  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="index.html">MaineMarijuana.us</a> • v1.77 • Public reference archive<br><span class="footer-disclaimer">Last updated: October 10, 2025. This site is a public reference for Maine cannabis compliance. Always consult the <a href="https://www.maine.gov/dafs/ocp/" target="_blank" rel="noopener">Maine Department of Health and Human Services</a> for official rules, guidance, and updates. No content here constitutes legal advice.</span></footer>
+    </main>
+  </div>
+</body></html>
