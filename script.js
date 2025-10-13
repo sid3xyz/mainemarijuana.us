@@ -25,6 +25,33 @@
       try { await load(f); } catch(_) { /* continue to attempt others */ }
     }
   })();
+
+  // --- Scroll-Spy for TOC ---
+  document.addEventListener('DOMContentLoaded', () => {
+    const tocLinks = document.querySelectorAll('.toc-nav__list a');
+    if (tocLinks.length === 0) return;
+
+    const sections = Array.from(tocLinks).map(link => {
+      const id = link.getAttribute('href').substring(1);
+      return document.getElementById(id);
+    }).filter(Boolean);
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const link = document.querySelector(`.toc-nav__list a[href="#${id}"]`);
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: "-50% 0px -50% 0px" }); // Highlight when section is in the middle of the screen
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+
 })();
 
 // Lightweight loader for other scripts

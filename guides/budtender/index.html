@@ -10,7 +10,7 @@
   <!-- admin dispatch: static guide hub; JS omitted -->
   <meta name="robots" content="index, follow" />
 </head>
-<body data-page="budtender">
+<body data-page="guide">
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header" role="banner">
     <div class="site-header__inner">
@@ -33,12 +33,22 @@
       </nav>
     </div>
   </header>
-  <div class="site-shell single-column">
+  <div class="site-shell two-column">
+    <aside class="sidebar">
+      <nav class="toc-nav" aria-labelledby="toc-heading">
+        <h2 id="toc-heading" class="toc-nav__title">On this page</h2>
+        <ul class="toc-nav__list">
+          <li><a href="#core-duties">Core Duties</a></li>
+          <li><a href="#glossary">Key Terms</a></li>
+          <li><a href="#accessibility">Accessibility & Print</a></li>
+        </ul>
+      </nav>
+    </aside>
     <main id="main" tabindex="-1">
-      <section class="hero hero--budtender" aria-labelledby="budtender-heading">
+      <header class="hero hero--interior" id="guide-hero">
         <div class="hero__content">
           <div class="status-pill">Maine Budtender Reference</div>
-          <h1 id="budtender-heading">Budtender Training & Compliance Hub</h1>
+          <h1 id="guide-hero__title">Budtender Training & Compliance Hub</h1>
           <p class="hero__lead">Comprehensive frontline guide for Maine cannabis retail staff. Covers daily workflow, compliance, customer service, product knowledge, incident handling, and escalation protocols. Built for print, mobile, and shift handoff.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#daily-checklist">Daily Checklist</a>
@@ -49,7 +59,7 @@
           </div>
           <p class="hero__note text-small">Pair these resources with the <a href="../compliance/compliance_guide.html">Retail Operations Playbook</a> and <a href="../../metrc/training/budtender-basics.html">METRC Budtender Training</a> for statutory citations and escalation paths.</p>
         </div>
-      </section>
+      </header>
 
       <section class="quick-launch" aria-labelledby="daily-checklist">
         <div class="section-intro">
