@@ -58,8 +58,8 @@
   --input-focus-border: #4dabf7;
 }
 
-/* Medical Program Theme - Green/Teal Palette */
-[data-program="medical"] {
+/* Medical Program Theme - Green/Teal Palette (Light Mode) */
+body[data-program="medical"] {
   --bg-gradient: linear-gradient(120deg, #34d399 0%, #10b981 100%);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-bg-strong: rgba(255, 255, 255, 0.85);
@@ -80,7 +80,8 @@
   --input-focus-border: #059669;
 }
 
-[data-program="medical"][data-theme="dark"] {
+/* Medical Program Theme - Dark Mode Override */
+html[data-theme="dark"] body[data-program="medical"] {
   --bg-gradient: linear-gradient(120deg, #064e3b 0%, #065f46 100%);
   --glass-bg: rgba(6, 78, 59, 0.7);
   --glass-bg-strong: rgba(6, 78, 59, 0.9);

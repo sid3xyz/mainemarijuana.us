@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return localStorage.getItem('theme') || getSystemTheme();
   }
   function setTheme(theme) {
-    body.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
     toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
