@@ -5,55 +5,168 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-  <title>MaineMarijuana.us | Cannabis Retail Compliance Hub</title>
-  <meta name="description" content="Complete compliance toolkit for Maine cannabis retailers: printable signs, training guides, METRC resources, and regulatory updates." />
+  <title>MaineMarijuana.us | Maine Cannabis Compliance Hub</title>
+  <meta name="description" content="Comprehensive compliance resources for Maine's medical and adult-use cannabis programs." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <!-- admin dispatch: this portal page is intentionally JS-free for speed, reliability, and printability -->
   <meta name="robots" content="index, follow" />
+  <style>
+    .program-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: var(--space-2xl);
+      margin: var(--space-2xl) 0;
+    }
+    @media (max-width: 768px) {
+      .program-selector { grid-template-columns: 1fr; gap: var(--space-xl); }
+    }
+    .program-card {
+      position: relative;
+      padding: var(--space-2xl);
+      text-align: center;
+      transition: all var(--transition-base);
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .program-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-success));
+      opacity: 0.6;
+      transition: opacity var(--transition-base);
+    }
+    .program-card:hover::before { opacity: 1; }
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px var(--glass-shadow);
+    }
+    .program-card--rec {
+      background: linear-gradient(135deg, rgba(102, 166, 255, 0.1), rgba(137, 247, 254, 0.1));
+    }
+    .program-card--med {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1));
+    }
+    .program-icon { font-size: 4rem; margin-bottom: var(--space-lg); }
+    .program-title {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--accent-primary);
+    }
+    .program-card--rec .program-title { color: #0066cc; }
+    .program-card--med .program-title { color: #059669; }
+    .program-description {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: var(--space-xl);
+    }
+    .program-features {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-xl) 0;
+      text-align: left;
+    }
+    .program-features li {
+      padding: var(--space-sm) 0;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .program-features li::before {
+      content: "✓";
+      color: var(--accent-success);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .program-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-md) var(--space-2xl);
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      margin-top: auto;
+    }
+    .program-btn--rec { background: #0066cc; color: white; }
+    .program-btn--rec:hover {
+      background: #0052a3;
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
+      text-decoration: none;
+    }
+    .program-btn--med { background: #059669; color: white; }
+    .program-btn--med:hover {
+      background: #047857;
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.3);
+      text-decoration: none;
+    }
+    .landing-hero { text-align: center; padding: var(--space-3xl) 0 var(--space-2xl); }
+    .landing-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--space-md); }
+    .landing-hero p {
+      font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
-<body data-page="portal">
-  <div class="glass-panel">
-    <header role="banner">
-      <h1>Adult Use Establishment Compliance Hub</h1>
-      <p>An operational resource for Maine cannabis licensees, citing the Adult Use Cannabis Act (Title 28-B).</p>
-      <nav aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="med/index.html">Medical Program</a>
-        <a href="resources/index.html">Print Center</a>
-        <a href="guides/budtender/index.html">Budtenders</a>
-        <a href="guides/manager/index.html">Managers</a>
-      </nav>
-    </header>
-  </div>
+<body data-page="landing">
+  <div class="site-shell single-column">
+    <div class="glass-panel">
+      <header class="landing-hero" role="banner">
+        <h1>Maine Cannabis Compliance Hub</h1>
+        <p>Professional operational resources for Maine's cannabis industry. Select your program below.</p>
+      </header>
 
-  <div class="glass-panel">
-    <main id="main">
-      <h2>Compliance & Operations Guides</h2>
-      <div class="resource-grid">
-        <a href="guides/establishment-guide.html" class="resource-tile glass-panel">
-          <h3>Establishment Guide</h3>
-          <p>Licensure, operational requirements, and inspections.</p>
-        </a>
-        <a href="guides/budtender/index.html" class="resource-tile glass-panel">
-          <h3>Budtender & Staff Guide</h3>
-          <p>Age verification, purchase limits, and OCP compliance.</p>
-        </a>
-        <a href="guides/manager/index.html" class="resource-tile glass-panel">
-          <h3>Manager Compliance Guide</h3>
-          <p>Oversight, inventory, and staff training requirements.</p>
-        </a>
-        <a href="tools.html" class="resource-tile glass-panel">
-          <h3>Purchase Limit Calculator</h3>
-          <p>Calculate sales against the 2.5-ounce total and 5-gram concentrate limit.</p>
-        </a>
-      </div>
-    </main>
-  </div>
+      <main id="main">
+        <div class="program-selector">
+          <article class="glass-panel program-card program-card--rec">
+            <div class="program-icon">🌿</div>
+            <h2 class="program-title">Adult Use Program</h2>
+            <p class="program-description">Recreational cannabis retail compliance resources under Title 28-B</p>
+            <ul class="program-features">
+              <li>Budtender & manager training guides</li>
+              <li>Purchase limit calculator & tools</li>
+              <li>METRC system integration resources</li>
+              <li>Printable compliance signage</li>
+              <li>OCP policy documents & guidance</li>
+            </ul>
+            <a href="/rec/" class="program-btn program-btn--rec">Enter Adult Use →</a>
+          </article>
 
-  <footer class="glass-panel">
-    &copy; 2025 MaineMarijuana.us • Public reference archive. Not legal advice.
-  </footer>
+          <article class="glass-panel program-card program-card--med">
+            <div class="program-icon">🏥</div>
+            <h2 class="program-title">Medical Program</h2>
+            <p class="program-description">Medical marijuana program compliance resources under Title 22</p>
+            <ul class="program-features">
+              <li>Caregiver & dispensary staff guides</li>
+              <li>Patient verification procedures</li>
+              <li>Registry system documentation</li>
+              <li>Medical-specific compliance signs</li>
+              <li>DHHS regulations & updates</li>
+            </ul>
+            <a href="/med/" class="program-btn program-btn--med">Enter Medical →</a>
+          </article>
+        </div>
+      </main>
+    </div>
+
+    <footer class="glass-panel">
+      <p>&copy; 2025 MaineMarijuana.us • Public reference archive • Not legal advice</p>
+      <p class="text-small text-muted">Consult Maine OCP and DHHS for official guidance.</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

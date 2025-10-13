@@ -58,6 +58,49 @@
   --input-focus-border: #4dabf7;
 }
 
+/* Medical Program Theme - Green/Teal Palette */
+[data-program="medical"] {
+  --bg-gradient: linear-gradient(120deg, #34d399 0%, #10b981 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-strong: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --text-color: #064e3b;
+  --text-muted: #047857;
+  --text-faint: #059669;
+  --accent-primary: #059669;
+  --accent-primary-hover: #047857;
+  --accent-success: #10b981;
+  --accent-warning: #f59e0b;
+  --accent-danger: #ef4444;
+  --link-color: #047857;
+  --link-hover: #065f46;
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --input-border: rgba(0, 0, 0, 0.15);
+  --input-focus-border: #059669;
+}
+
+[data-program="medical"][data-theme="dark"] {
+  --bg-gradient: linear-gradient(120deg, #064e3b 0%, #065f46 100%);
+  --glass-bg: rgba(6, 78, 59, 0.7);
+  --glass-bg-strong: rgba(6, 78, 59, 0.9);
+  --glass-border: rgba(52, 211, 153, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --text-color: #d1fae5;
+  --text-muted: #6ee7b7;
+  --text-faint: #34d399;
+  --accent-primary: #34d399;
+  --accent-primary-hover: #6ee7b7;
+  --accent-success: #34d399;
+  --accent-warning: #fbbf24;
+  --accent-danger: #f87171;
+  --link-color: #6ee7b7;
+  --link-hover: #a7f3d0;
+  --input-bg: rgba(6, 78, 59, 0.8);
+  --input-border: rgba(52, 211, 153, 0.2);
+  --input-focus-border: #34d399;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
 body {
