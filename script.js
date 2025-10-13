@@ -27,64 +27,56 @@
   })();
 })();
 
-// Theme toggle functionality
+// Lightweight loader for other scripts
 (function() {
   'use strict';
 
-  // Self-contained, immediate theme toggle logic
-  function applyTheme() {
-    const toggle = document.getElementById('theme-toggle');
-    if (!toggle) return;
+  // Lazy-load non-critical scripts for performance optimization
+  const lazyLoadScripts = [
+    'resources-filter.js',
+    'app.js'
+  ];
 
-    const body = document.body;
-    
-    function getSystemTheme() {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  lazyLoadScripts.forEach(src => {
+    const script = document.createElement('script');
+    script.src = base + src;
+    script.defer = true;
+    script.onload = () => console.log(`${src} loaded`);
+    document.body.appendChild(script);
+  });
+})();
+
+/* Modern Theme Engine */
+(function() {
+  'use strict';
+
+  const themeToggle = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+  let currentTheme = localStorage.getItem('theme');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (themeToggle) {
+      themeToggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+      themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
     }
+  }
 
-    function getTheme() {
-      return localStorage.getItem('theme') || getSystemTheme();
-    }
-
-    function setTheme(theme) {
-      body.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
-      toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-      toggle.setAttribute('aria-pressed', theme === 'dark');
-    }
-
-    setTheme(getTheme());
-
-    toggle.addEventListener('click', function() {
-      const current = getTheme();
-      const next = current === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-    });
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
     });
   }
 
-  // Run theme logic as soon as the DOM is ready
-  document.addEventListener('DOMContentLoaded', applyTheme);
+  prefersDark.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  applyTheme(currentTheme || (prefersDark.matches ? 'dark' : 'light'));
 })();
-
-// Lazy-load non-critical scripts for performance optimization
-const lazyLoadScripts = [
-  'resources-filter.js',
-  'app.js'
-];
-
-lazyLoadScripts.forEach(src => {
-  const script = document.createElement('script');
-  script.src = base + src;
-  script.defer = true;
-  script.onload = () => console.log(`${src} loaded`);
-  document.body.appendChild(script);
-});
 
 
