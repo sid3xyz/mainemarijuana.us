@@ -1,4 +1,25 @@
-# Medical Resources Page Update - January 2025
+# Medical Resources Page Correction & Verification
+# October 13, 2025
+
+## CRITICAL CORRECTION NOTICE
+
+**This document has been updated to reflect corrections to statutory citations and limits.**
+
+**ERRORS IDENTIFIED:**
+1. **Caregiver patient limit**: Previous version incorrectly stated "5 patients maximum" - this limit was removed by PL 2017, c. 452, §4
+2. **School distance**: Previous version incorrectly stated "1,000 ft" - statute specifies 500 feet
+3. **Wrong citation**: §2428(6)(E) cited for distance (actually security requirements) - correct citation is §2428(6)(B)
+
+**CURRENT LAW (verified October 2025, statute data extracted 1/07/2025):**
+- **Registered caregivers**: NO patient limit (cultivation limits: 30 mature/60 immature OR 500/1000 sq ft canopy)
+- **Unregistered family/household caregivers**: 2 patients maximum (Title 22 §2423-A(3)(C-1))
+- **Dispensary location**: 500 feet minimum from preexisting schools (Title 22 §2428(6)(B))
+
+---
+
+## Original Documentation (January 2025)
+
+
 
 ## Problem Identified
 The `/med/resources/` page contained **INCORRECT INFORMATION** - it was showing adult-use cannabis store regulations (Title 28-B) instead of medical marijuana program requirements (Title 22 MRS Chapter 558-C).
@@ -48,21 +69,22 @@ The `/med/resources/` page contained **INCORRECT INFORMATION** - it was showing 
 - Safe use guidelines specific to medical patients
 - **Citation**: 22 MRS §2426
 
-#### 5. Signs, Advertising & Marketing Compliance (NEW)
-- Signage cannot be placed within **1,000 feet of schools** (unless municipality sets 500-1,000 ft)
-- Prohibited: Marketing to minors, misleading/deceptive information
-- **Citation**: 22 MRS §2428(6)(E)
-- **Source**: [Title 28-B §702](https://legislature.maine.gov/statutes/28-B/title28-Bsec702.html) (applies to medical via §2428)
+#### 5. Dispensary Location & Facility Requirements (CORRECTED)
+- Dispensaries must be located at least **500 feet** from preexisting schools
+- Security measures and cultivation area requirements
+- **Citation**: 22 MRS §2428(6)(B) (CORRECTED from §2428(6)(E))
+- **Source**: [Title 22 §2428](https://legislature.maine.gov/statutes/22/title22sec2428.html)
 
 ---
 
 ## Staff References Updated
 
-### 1. Caregiver & Dispensary Registration (NEW)
+### 1. Caregiver & Dispensary Registration (CORRECTED)
 - Registry identification card requirements
 - Application process and renewal procedures
-- Cultivation area limits and patient limits (5 patients max per caregiver)
-- **Citation**: 22 MRS §2423-A, §2428
+- **CORRECTED**: Registered caregivers have NO patient limit (cultivation limits apply: 30 mature/60 immature OR 500/1000 sq ft canopy)
+- Unregistered family/household caregivers: 2 patients maximum
+- **Citation**: 22 MRS §2423-A(2)(B), §2423-A(3)(C-1), §2428
 
 ### 2. Cannabis Testing & Safety Standards
 - Testing facility certification requirements
@@ -81,12 +103,13 @@ The `/med/resources/` page contained **INCORRECT INFORMATION** - it was showing 
 - Discrimination prohibitions
 - **Citation**: 22 MRS §2423-A(3)
 
-### 5. Cultivation Area & Plant Count Limits (NEW)
-- **Caregiver limits**: Up to 5 qualifying patients per registered caregiver
-- **Plant counts**: 6 mature, 12 immature, unlimited seedlings (per patient)
+### 5. Cultivation Area & Plant Count Limits (CORRECTED)
+- **Registered caregiver limits**: NO patient limit (cultivation limits: 30 mature/60 immature plants OR 500/1000 sq ft canopy total)
+- **Unregistered family/household caregiver limits**: 2 patients maximum
+- **Patient cultivation rights**: 6 mature, 12 immature, unlimited seedlings (per patient)
 - **Harvest possession**: 8 pounds (per patient)
-- Multiple cultivation areas allowed for caregivers
-- **Citation**: 22 MRS §2423-A(2), §2428
+- Caregivers may maintain up to 2 cultivation areas
+- **Citation**: 22 MRS §2423-A(2)(B), §2423-A(3)(C-1), §2423-A(3)(B)
 
 ---
 
@@ -95,12 +118,12 @@ The `/med/resources/` page contained **INCORRECT INFORMATION** - it was showing 
 | Aspect | Medical Program (Title 22) | Adult-Use (Title 28-B) |
 |--------|---------------------------|------------------------|
 | **Age requirement** | Qualifying patients (any age with certification) | 21+ only |
-| **Immediate possession** | 2.5 oz usable cannabis | 2.5 oz cannabis |
+| **Transaction limit** | 2.5 oz per transaction (dispensary/caregiver) | 2.5 oz cannabis |
 | **Home possession** | **8 lbs harvested cannabis** | 2.5 oz total |
-| **Cultivation rights** | **6 mature, 12 immature, unlimited seedlings** | Not allowed (unless home cultivation) |
-| **Concentrate limits** | No separate sublimit | 10g concentrate sublimit |
+| **Cultivation rights** | **6 mature, 12 immature, unlimited seedlings** | 3 mature, 12 immature (home cultivation allowed) |
+| **Concentrate limits** | No separate sublimit | 5g concentrate sublimit |
 | **ID requirement** | Patient certification + govt ID | Govt-issued photo ID (21+) |
-| **Caregiver model** | Yes (5 patients max) | No |
+| **Caregiver model** | Yes (registered: no patient limit; unregistered family/household: 2 max) | No |
 | **Purchase location** | Registered dispensaries, caregivers | Licensed cannabis stores |
 
 ---
@@ -123,13 +146,20 @@ The `/med/resources/` page contained **INCORRECT INFORMATION** - it was showing 
 5. **OCP Guidance Documents**  
    https://www.maine.gov/dafs/ocp/resources/guidance-documents
 
-### Verification Method:
-- Web search of Maine OCP official resources (January 2025)
-- Direct statute review via Maine Legislature website
-- Cross-referenced with OCP FAQ on possession limits
-- Confirmed 2.5 oz usable + 8 lbs harvested cannabis limits
-- Verified cultivation rights (6 mature, 12 immature, unlimited seedlings)
-- Confirmed caregiver limit (5 patients maximum)
+### Verification Method (CORRECTED October 2025):
+- **Direct statute fetch** from legislature.maine.gov (statute data extracted 1/07/2025)
+- Fetched Title 22 §2423-A (authorized conduct) and §2428 (registered dispensaries)
+- Cross-referenced amendment history (PL 2017, c. 452, §4 removed 5-patient limit)
+- **LESSONS LEARNED**: Secondary sources (Justia, FindLaw, general websites) may cite outdated statute versions
+- **CORRECTED CLAIMS**:
+  - ❌ "5 patients maximum per caregiver" - REMOVED by 2017 amendment
+  - ✅ Registered caregivers: NO patient limit (cultivation limits: 30/60 plants OR 500/1000 sq ft)
+  - ✅ Unregistered family/household caregivers: 2 patients max (§2423-A(3)(C-1))
+  - ❌ "1,000 ft from schools" → CORRECTED to 500 feet (§2428(6)(B))
+  - ❌ Citation §2428(6)(E) → CORRECTED to §2428(6)(B) (6E is security, not distance)
+- Verified cultivation rights (6 mature, 12 immature, unlimited seedlings) - STILL CORRECT
+- Verified 8 lbs harvested possession - STILL CORRECT
+- Clarified 2.5 oz as transaction/transfer limit, not possession limit
 
 ---
 
