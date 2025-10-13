@@ -1446,3 +1446,261 @@ hr {
 .wip-banner p {
   margin: 0;
 }
+
+/* Resource Tiles */
+.resource-tiles {
+  display: grid;
+  gap: clamp(1.2rem, 2.5vw, 1.8rem);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.resource-tile {
+  position: relative;
+  display: grid;
+  gap: 0.65rem;
+  padding: clamp(1.35rem, 3vw, 1.85rem);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+  min-height: 220px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.resource-tile:hover,
+.resource-tile:focus-within {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-bg-gradient);
+}
+
+.resource-tile__link:focus-visible {
+  outline: none;
+}
+
+.resource-tile h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.2rem, 1.8vw + 0.6rem, 1.6rem);
+}
+
+.resource-tile p {
+  margin: 0;
+}
+
+.resource-tile__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-muted-soft);
+}
+
+.resource-tile__desc {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Step-by-Step Guide */
+.step-by-step {
+  display: grid;
+  gap: 2rem;
+  border-left: 3px solid var(--color-primary-light);
+  padding-left: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.step__number {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-inverse);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.step__content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.step__content p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #1a1a1a;
+  --color-bg-soft: #2a2a2a;
+  --color-bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  --color-surface: #2d2d2d;
+  --color-surface-solid: #2d2d2d;
+  --color-surface-alt: #333333;
+  --color-surface-glass: rgba(45, 45, 45, 0.8);
+  --color-border: #404040;
+  --color-border-strong: #555555;
+  --color-border-soft: #333333;
+  --color-text: #ffffff;
+  --color-muted: #cccccc;
+  --color-muted-soft: #aaaaaa;
+  --color-inverse: #1a1a1a;
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-med: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 0 0 rgba(13, 127, 63, 0.5);
+  --shadow-glow-secondary: 0 0 0 0 rgba(26, 54, 93, 0.5);
+}
+
+/* WIP Banner for Medical Site */
+.wip-banner {
+  background-color: #ffc107; /* Amber alert */
+  color: #181a1b;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  border-bottom: 3px solid #c79100;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1001; /* Above header */
+}
+
+.wip-banner p {
+  margin: 0;
+}
+
+/* Resource Tiles */
+.resource-tiles {
+  display: grid;
+  gap: clamp(1.2rem, 2.5vw, 1.8rem);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.resource-tile {
+  position: relative;
+  display: grid;
+  gap: 0.65rem;
+  padding: clamp(1.35rem, 3vw, 1.85rem);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+  min-height: 220px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.resource-tile:hover,
+.resource-tile:focus-within {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-bg-gradient);
+}
+
+.resource-tile__link:focus-visible {
+  outline: none;
+}
+
+.resource-tile h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.2rem, 1.8vw + 0.6rem, 1.6rem);
+}
+
+.resource-tile p {
+  margin: 0;
+}
+
+.resource-tile__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-muted-soft);
+}
+
+.resource-tile__desc {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Step-by-Step Guide */
+.step-by-step {
+  display: grid;
+  gap: 2rem;
+  border-left: 3px solid var(--color-primary-light);
+  padding-left: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.step__number {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-inverse);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.step__content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.step__content p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #1a1a1a;
+  --color-bg-soft: #2a2a2a;
+  --color-bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  --color-surface: #2d2d2d;
+  --color-surface-solid: #2d2d2d;
+  --color-surface-alt: #333333;
+  --color-surface-glass: rgba(45, 45, 45, 0.8);
+  --color-border: #404040;
+  --color-border-strong: #555555;
+  --color-border-soft: #333333;
+  --color-text: #ffffff;
+  --color-muted: #cccccc;
+  --color-muted-soft: #aaaaaa;
+  --color-inverse: #1a1a1a;
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-med: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 0 0 rgba(13, 127, 63, 0.5);
+  --shadow-glow-secondary: 0 0 0 0 rgba(26, 54, 93, 0.5);
+}
