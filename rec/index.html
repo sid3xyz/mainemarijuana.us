@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script src="/theme.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
@@ -11,8 +10,10 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <!-- admin dispatch: this portal page is intentionally JS-free for speed, reliability, and printability -->
   <meta name="robots" content="index, follow" />
+  <script src="/theme.js"></script>
 </head>
 <body data-page="portal">
+  <a href="#main" class="skip-link">Skip to content</a>
   <div class="glass-panel">
     <header role="banner">
       <h1>Adult Use Establishment Compliance Hub</h1>
@@ -29,7 +30,7 @@
   </div>
 
   <div class="glass-panel">
-    <main id="main">
+    <main id="main" role="main" tabindex="-1">
       <h2>Compliance & Operations Guides</h2>
       <div class="resource-grid">
         <a href="guides/establishment-guide.html" class="resource-tile glass-panel">
