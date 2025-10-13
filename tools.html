@@ -10,146 +10,127 @@
   <script defer src="script.js"></script>
   <meta name="robots" content="index, follow" />
 </head>
-<body data-page="tools">
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header class="site-header" role="banner">
-    <div class="site-header__inner">
-      <a class="brand" href="index.html" aria-label="MaineMarijuana.us home">
-        <span class="brand__wordmark">MaineMarijuana.us</span>
-        <span class="brand__tagline">Cannabis retail compliance hub</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <div class="nav-menu">
-          <a href="index.html">Home</a>
-          <a href="resources/index.html">Print Center</a>
-          <a href="guides/budtender/index.html">Budtenders</a>
-          <a href="guides/manager/index.html">Managers</a>
-          <a href="metrc/index.html">METRC</a>
-          <a href="tools.html" aria-current="page">Tools</a>
-          <a href="guidencedocs/index.html">OCP Docs</a>
+<body data-page="calculator">
+  <div class="glass-panel">
+    <header class="hero hero--interior" aria-labelledby="tools-heading">
+      <div class="hero__content">
+        <div class="status-pill">Budtender tools</div>
+        <h1 id="tools-heading">Counter-side calculators &amp; quick checks</h1>
+        <p class="hero__lead">Lock in weight math, concentrate caps, and scenario playbooks before completing a sale. Designed for fast taps on mobile or the register screen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#purchase-calculator">Run calculator</a>
+          <a class="btn btn--ghost" href="guides/compliance/summary-compliance.html">Review shift summary</a>
         </div>
-      </nav>
-    </div>
-  </header>
-  <div class="site-shell single-column">
-    <main id="main" tabindex="-1">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li aria-current="page">Tools</li>
-        </ol>
-      </nav>
-      <section class="hero hero--tools" aria-labelledby="tools-heading">
-        <div class="hero__content">
-          <div class="status-pill">Budtender tools</div>
-          <h1 id="tools-heading">Counter-side calculators &amp; quick checks</h1>
-          <p class="hero__lead">Lock in weight math, concentrate caps, and scenario playbooks before completing a sale. Designed for fast taps on mobile or the register screen.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#purchase-calculator">Run calculator</a>
-            <a class="btn btn--ghost" href="guides/compliance/summary-compliance.html">Review shift summary</a>
+        <p class="hero__note text-small">Pair these tools with the Retail Operations Playbook for full SOPs, escalation steps, and statutory citations.</p>
+      </div>
+      <!-- Usage tips aside removed for visual overhaul prep -->
+    </header>
+
+    <main id="main" class="main-content">
+      <div class="calculator-wrapper">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Tools</li>
+          </ol>
+        </nav>
+        <section class="module module--tool" aria-labelledby="calculator">
+          <div class="module__header">
+            <h2 id="calculator">Purchase Limit Calculator</h2>
+            <p>Track aggregate weight, concentrate sub-limits, and line-specific issues in real time.</p>
           </div>
-          <p class="hero__note text-small">Pair these tools with the Retail Operations Playbook for full SOPs, escalation steps, and statutory citations.</p>
-        </div>
-        <!-- Usage tips aside removed for visual overhaul prep -->
-      </section>
+          <article class="tool-card" id="purchase-calculator" aria-live="polite">
+            <header class="tool-card-header">
+              <span class="link-meta">Calculator</span>
+              <h3>Check transaction totals against statutory limits</h3>
+              <p class="muted text-small">Track aggregate weight in grams and ounces, flag concentrate overages, and document over-limit reasons in real time.</p>
+            </header>
 
-      <section class="module module--tool" aria-labelledby="calculator">
-        <div class="module__header">
-          <h2 id="calculator">Purchase Limit Calculator</h2>
-          <p>Track aggregate weight, concentrate sub-limits, and line-specific issues in real time.</p>
-        </div>
-        <article class="tool-card" id="purchase-calculator" aria-live="polite">
-          <header class="tool-card-header">
-            <span class="link-meta">Calculator</span>
-            <h3>Check transaction totals against statutory limits</h3>
-            <p class="muted text-small">Track aggregate weight in grams and ounces, flag concentrate overages, and document over-limit reasons in real time.</p>
-          </header>
-
-          <form class="calc-form" data-tool="purchase-calculator" novalidate>
-            <div class="calc-rows" data-role="rows"></div>
-            <div class="calc-actions">
-              <button type="button" class="btn-secondary" data-action="add-row">Add product line</button>
-              <button type="button" class="btn-ghost" data-action="reset">Clear all</button>
-            </div>
-          </form>
-
-          <div class="calc-summary" data-role="summary">
-            <div class="calc-metric">
-              <span>Total cannabis weight</span>
-              <strong data-result="total-grams">0.00 g</strong>
-              <small data-result="total-ounces">0.00 oz</small>
-            </div>
-            <div class="calc-metric">
-              <span>Concentrate subtotal</span>
-              <strong data-result="concentrate-grams">0.00 g</strong>
-              <small>Cap: 10 g</small>
-            </div>
-            <div class="calc-metric">
-              <span>Lines counted</span>
-              <strong data-result="line-count">0</strong>
-              <small data-result="lines-over">All compliant</small>
-            </div>
-          </div>
-
-          <div class="calc-status is-ok" data-role="status" role="status" aria-live="polite">Enter product lines to check limits.</div>
-          <p class="calc-footnote text-small muted">For edibles and infused beverages, count the entire net product weight toward the 2.5 oz aggregate. For the 10 g concentrate sub‑limit, count only cannabis concentrate weight (exclude non‑cannabis ingredients). <span class="citation"><a href="https://legislature.maine.gov/statutes/28-B/title28-Bsec1501.html"><em>28‑B §1501(1)(B), (F)</em></a>; <a href="https://legislature.maine.gov/statutes/28-B/title28-Bsec102-A.html"><em>§102‑A(9)</em></a></span></p>
-
-          <template id="purchase-line-template">
-            <div class="calc-row" data-line>
-              <label class="sr-only" data-label="type">Product type</label>
-              <select data-field="type">
-                <option value="flower">Flower &amp; Pre-rolls</option>
-                <option value="concentrate">Concentrates (carts, dabs, oils)</option>
-                <option value="edible">Edibles &amp; Infused Products</option>
-                <option value="other">Other Cannabis Products</option>
-              </select>
-              <div class="calc-inputs">
-                <label class="sr-only" data-label="amount">Amount</label>
-                <input type="number" inputmode="decimal" min="0" step="0.01" placeholder="0" data-field="amount" aria-label="Amount" />
-                <label class="sr-only" data-label="unit">Unit</label>
-                <select data-field="unit" aria-label="Unit">
-                  <option value="grams">grams</option>
-                  <option value="ounces">ounces</option>
-                </select>
+            <form class="calc-form" data-tool="purchase-calculator" novalidate>
+              <div class="calc-rows" data-role="rows"></div>
+              <div class="calc-actions">
+                <button type="button" class="btn-secondary" data-action="add-row">Add product line</button>
+                <button type="button" class="btn-ghost" data-action="reset">Clear all</button>
               </div>
-              <button type="button" class="calc-remove" data-action="remove-line" aria-label="Remove product line">×</button>
+            </form>
+
+            <div class="calc-summary" data-role="summary">
+              <div class="calc-metric">
+                <span>Total cannabis weight</span>
+                <strong data-result="total-grams">0.00 g</strong>
+                <small data-result="total-ounces">0.00 oz</small>
+              </div>
+              <div class="calc-metric">
+                <span>Concentrate subtotal</span>
+                <strong data-result="concentrate-grams">0.00 g</strong>
+                <small>Cap: 10 g</small>
+              </div>
+              <div class="calc-metric">
+                <span>Lines counted</span>
+                <strong data-result="line-count">0</strong>
+                <small data-result="lines-over">All compliant</small>
+              </div>
             </div>
-          </template>
-        </article>
-      </section>
 
-      <section class="section-stack" aria-labelledby="checklists">
-        <div class="section-intro">
-          <h2 id="checklists">Shift checklists &amp; scripts</h2>
-          <p>Jump to the exact playbook section you need mid-transaction.</p>
-        </div>
-        <div class="tile-grid tile-grid--wrap" data-search-group="checklists">
-          <article class="tile" data-search-item="id verification checklist acceptable id documents refusal steps" data-topic="id" data-kind="guide">
-            <a class="tile__link" href="guides/compliance/sales-core-duties.html" aria-label="Open ID verification checklist"></a>
-            <span class="tile__label">Checkpoint</span>
-            <h3>ID Verification Checklist</h3>
-            <p>Verify 21+ IDs, spot tampering, and document refusals before product talk.</p>
-          </article>
-          <article class="tile" data-search-item="decline sale intoxicated customer escalation documentation" data-topic="prohibited" data-kind="guide">
-            <a class="tile__link" href="guides/compliance/sales-core-duties.html" aria-label="Review prohibited sale guidance"></a>
-            <span class="tile__label">Stop signs</span>
-            <h3>When to Decline a Sale</h3>
-            <p>Recognize intoxication, prohibited combos, and log the interaction.</p>
-          </article>
-          <article class="tile" data-search-item="customer talking points faq after purchase consumption rules" data-topic="faq" data-kind="guide">
-            <a class="tile__link" href="guides/compliance/post-purchase-faq.html" aria-label="Open customer FAQ talking points"></a>
-            <span class="tile__label">Customer care</span>
-            <h3>After-Purchase Talking Points</h3>
-            <p>Provide compliant answers on possession, travel, and home grow limits.</p>
-          </article>
-        </div>
-      </section>
+            <div class="calc-status is-ok" data-role="status" role="status" aria-live="polite">Enter product lines to check limits.</div>
+            <p class="calc-footnote text-small muted">For edibles and infused beverages, count the entire net product weight toward the 2.5 oz aggregate. For the 10 g concentrate sub‑limit, count only cannabis concentrate weight (exclude non‑cannabis ingredients). <span class="citation"><a href="https://legislature.maine.gov/statutes/28-B/title28-Bsec1501.html"><em>28‑B §1501(1)(B), (F)</em></a>; <a href="https://legislature.maine.gov/statutes/28-B/title28-Bsec102-A.html"><em>§102‑A(9)</em></a></span></p>
 
-      <section class="callout" data-label="Reminder">
-        <p class="mb-0 text-small">Log over-limit attempts, refusals, and unusual incidents per store policy and Maine OCP requirements. Pair digital tracking with binder notes at close.</p>
-      </section>
+            <template id="purchase-line-template">
+              <div class="calc-row" data-line>
+                <label class="sr-only" data-label="type">Product type</label>
+                <select data-field="type">
+                  <option value="flower">Flower &amp; Pre-rolls</option>
+                  <option value="concentrate">Concentrates (carts, dabs, oils)</option>
+                  <option value="edible">Edibles &amp; Infused Products</option>
+                  <option value="other">Other Cannabis Products</option>
+                </select>
+                <div class="calc-inputs">
+                  <label class="sr-only" data-label="amount">Amount</label>
+                  <input type="number" inputmode="decimal" min="0" step="0.01" placeholder="0" data-field="amount" aria-label="Amount" />
+                  <label class="sr-only" data-label="unit">Unit</label>
+                  <select data-field="unit" aria-label="Unit">
+                    <option value="grams">grams</option>
+                    <option value="ounces">ounces</option>
+                  </select>
+                </div>
+                <button type="button" class="calc-remove" data-action="remove-line" aria-label="Remove product line">×</button>
+              </div>
+            </template>
+          </article>
+        </section>
 
-  <footer class="footer">&copy; 2025 <a href="https://sid3.xyz">sid3.xyz</a> • <a href="index.html">MaineMarijuana.us</a> • v1.77 • Tools suite • Not legal advice.</footer>
+        <section class="section-stack" aria-labelledby="checklists">
+          <div class="section-intro">
+            <h2 id="checklists">Shift checklists &amp; scripts</h2>
+            <p>Jump to the exact playbook section you need mid-transaction.</p>
+          </div>
+          <div class="tile-grid tile-grid--wrap" data-search-group="checklists">
+            <article class="tile" data-search-item="id verification checklist acceptable id documents refusal steps" data-topic="id" data-kind="guide">
+              <a class="tile__link" href="guides/compliance/sales-core-duties.html" aria-label="Open ID verification checklist"></a>
+              <span class="tile__label">Checkpoint</span>
+              <h3>ID Verification Checklist</h3>
+              <p>Verify 21+ IDs, spot tampering, and document refusals before product talk.</p>
+            </article>
+            <article class="tile" data-search-item="decline sale intoxicated customer escalation documentation" data-topic="prohibited" data-kind="guide">
+              <a class="tile__link" href="guides/compliance/sales-core-duties.html" aria-label="Review prohibited sale guidance"></a>
+              <span class="tile__label">Stop signs</span>
+              <h3>When to Decline a Sale</h3>
+              <p>Recognize intoxication, prohibited combos, and log the interaction.</p>
+            </article>
+            <article class="tile" data-search-item="customer talking points faq after purchase consumption rules" data-topic="faq" data-kind="guide">
+              <a class="tile__link" href="guides/compliance/post-purchase-faq.html" aria-label="Open customer FAQ talking points"></a>
+              <span class="tile__label">Customer care</span>
+              <h3>After-Purchase Talking Points</h3>
+              <p>Provide compliant answers on possession, travel, and home grow limits.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="callout" data-label="Reminder">
+          <p class="mb-0 text-small">Log over-limit attempts, refusals, and unusual incidents per store policy and Maine OCP requirements. Pair digital tracking with binder notes at close.</p>
+        </section>
+      </div>
     </main>
   </div>
+  <script src="script.js"></script>
 </body></html>
