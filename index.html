@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script src="/theme.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
@@ -45,79 +46,34 @@
       <!-- admin dispatch: portal hero sets the compliance brief, keep copy lean for on-shift staff skimming -->
       <section class="hero hero--portal" aria-labelledby="portal-title">
         <div class="hero__content">
-          <p class="eyebrow">Complete Compliance Toolkit</p>
-          <h1 id="portal-title">Maine Cannabis Retail Compliance Hub</h1>
-          <p class="hero__lead">Navigate by section. Each page is focused, printable, and built for offline use.</p>
-          <div class="hero__actions" aria-label="Quick navigation options">
-            <a class="btn btn--primary" href="quick-start.html" aria-label="Quick Start Guide">Quick Start</a>
-            <a class="btn btn--ghost" href="search.html" aria-label="Search Resources">Search</a>
-          </div>
-          <dl class="hero__metrics" aria-label="Key resources">
-            <dt>Printable Signs</dt>
-            <dd>Required signage, posters, and staff references</dd>
-            <dt>Staff Training</dt>
-            <dd>Budtender scripts, manager procedures, METRC training</dd>
-            <dt>Compliance Tools</dt>
-            <dd>Purchase calculators, checklists, and regulatory guides</dd>
-          </dl>
+          <p class="eyebrow">OCP Adult Use Cannabis Program</p>
+          <h1 id="portal-title">Adult Use Establishment Compliance Hub</h1>
+          <p class="hero__lead">An operational resource for Maine cannabis licensees, citing the Adult Use Cannabis Act (Title 28-B).</p>
         </div>
       </section>
 
-      <!-- admin dispatch: tile grid surfaces fast jumps for budtenders, managers, and compliance leads -->
-      <section class="section-stack" aria-labelledby="hub-sections">
+      <section class="section-stack" aria-labelledby="resource-title">
         <div class="section-intro">
-          <h2 id="hub-sections">Hub Sections</h2>
-          <p>Pick a section to dive into focused, printable content.</p>
+          <h2 id="resource-title">Compliance & Operations Guides</h2>
+          <p>Core guides for navigating the legal requirements of the adult-use program.</p>
         </div>
-        <div class="tile-grid tile-grid--wrap">
-          <article class="tile tile--primary" data-search-item="quick start setup onboarding open store" data-topic="operations" data-kind="guide">
-            <a class="tile__link" href="quick-start.html" aria-label="Quick Start for New Retailers"></a>
-            <span class="tile__label">Start here</span>
-            <h3>Quick Start</h3>
-            <p>Essential first steps to get compliant and operational.</p>
-          </article>
-          <article class="tile" data-search-item="roles budtender manager metrc training access" data-topic="staff" data-kind="guide">
-            <a class="tile__link" href="roles.html" aria-label="Quick Access by Role"></a>
-            <span class="tile__label">By role</span>
-            <h3>Quick Access</h3>
-            <p>Go straight to Budtender, Manager, or METRC hubs.</p>
-          </article>
-          <article class="tile" data-search-item="search find guides tools statutes" data-topic="search" data-kind="tool">
-            <a class="tile__link" href="search.html" aria-label="Search the hub"></a>
-            <span class="tile__label">Find it fast</span>
-            <h3>Search</h3>
-            <p>Keyword search with topic and type filters.</p>
-          </article>
-          <article class="tile" data-search-item="essential resources tools documents library" data-topic="operations" data-kind="guide">
-            <a class="tile__link" href="essential-resources.html" aria-label="Essential resources"></a>
-            <span class="tile__label">Core set</span>
-            <h3>Essential Resources</h3>
-            <p>Core tools and documents used every day.</p>
-          </article>
-          <article class="tile" data-search-item="print center signs posters checklists" data-topic="signage" data-kind="printable">
-            <a class="tile__link" href="resources/index.html" aria-label="Print Center"></a>
-            <span class="tile__label">Print</span>
-            <h3>Print Center</h3>
-            <p>Required signage, posters, and staff references.</p>
-          </article>
-          <article class="tile" data-search-item="download statute pdf title 28-b" data-topic="statute" data-kind="documents">
-            <a class="tile__link" href="downloads.html" aria-label="Download Center"></a>
-            <span class="tile__label">Downloads</span>
-            <h3>Download Center</h3>
-            <p>Title 28‑B full statute and key chapter excerpts.</p>
-          </article>
-          <article class="tile tile--outline" data-search-item="licensed retailers dispensaries directory consumer" data-topic="directory" data-kind="consumer">
-            <a class="tile__link" href="retailers.html" aria-label="Licensed Retailers Directory"></a>
-            <span class="tile__label">Consumer</span>
-            <h3>Licensed Retailers</h3>
-            <p>Find licensed dispensaries and adult-use cannabis retailers.</p>
-          </article>
-          <article class="tile tile--outline" data-search-item="state resources ocp official guidance" data-topic="regulatory" data-kind="documents">
-            <a class="tile__link" href="state-resources.html" aria-label="State Resources"></a>
-            <span class="tile__label">Regulatory</span>
-            <h3>State Resources</h3>
-            <p>Official OCP announcements, licensing, and testing.</p>
-          </article>
+        <div class="resource-grid">
+            <a href="guides/establishment-guide.html" class="resource-tile">
+              <h3 class="resource-tile__title">Establishment Guide</h3>
+              <p class="resource-tile__desc">Licensure, operational requirements, and inspections for adult-use establishments.</p>
+            </a>
+            <a href="guides/budtender/index.html" class="resource-tile">
+              <h3 class="resource-tile__title">Budtender & Staff Guide</h3>
+              <p class="resource-tile__desc">Age verification, purchase limits, and OCP compliance procedures.</p>
+            </a>
+            <a href="guides/manager/index.html" class="resource-tile">
+              <h3 class="resource-tile__title">Manager Compliance Guide</h3>
+              <p class="resource-tile__desc">Oversight, inventory, and staff training requirements under Title 28-B.</p>
+            </a>
+            <a href="tools.html" class="resource-tile">
+              <h3 class="resource-tile__title">Purchase Limit Calculator</h3>
+              <p class="resource-tile__desc">Calculate sales against the 2.5-ounce total and 5-gram concentrate limit.</p>
+            </a>
         </div>
       </section>
     </main>
