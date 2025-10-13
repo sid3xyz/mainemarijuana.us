@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script src="/theme.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
@@ -10,82 +9,132 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <meta name="robots" content="index, follow" />
+  <script src="/theme.js"></script>
+  <script src="/theme.js"></script>
   <style>
+    /* Landing Page Specific Styles */
+    .landing-hero {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-md) var(--space-2xl);
+    }
+    .landing-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: var(--space-md);
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-success));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .landing-hero__tagline {
+      font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
     .program-selector {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
       gap: var(--space-2xl);
-      margin: var(--space-2xl) 0;
+      margin: var(--space-2xl) auto;
+      padding: 0 var(--space-md);
+      max-width: 1200px;
     }
-    @media (max-width: 768px) {
-      .program-selector { grid-template-columns: 1fr; gap: var(--space-xl); }
-    }
+    
     .program-card {
       position: relative;
       padding: var(--space-2xl);
-      text-align: center;
+      border-radius: var(--radius-lg);
       transition: all var(--transition-base);
-      min-height: 400px;
+      min-height: 450px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      isolation: isolate;
     }
+    
     .program-card::before {
       content: '';
       position: absolute;
-      inset: 0;
+      inset: -2px;
       border-radius: var(--radius-lg);
-      padding: 3px;
       background: linear-gradient(135deg, var(--accent-primary), var(--accent-success));
-      opacity: 0.6;
+      opacity: 0.4;
+      z-index: -1;
       transition: opacity var(--transition-base);
     }
-    .program-card:hover::before { opacity: 1; }
+    
+    .program-card:hover::before { opacity: 0.8; }
+    
     .program-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 60px var(--glass-shadow);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     }
+    
     .program-card--rec {
-      background: linear-gradient(135deg, rgba(102, 166, 255, 0.1), rgba(137, 247, 254, 0.1));
+      background: linear-gradient(135deg, rgba(102, 166, 255, 0.08), rgba(137, 247, 254, 0.08));
     }
+    .program-card--rec::before {
+      background: linear-gradient(135deg, #0066cc, #66a6ff);
+    }
+    
     .program-card--med {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1));
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.08));
     }
-    .program-icon { font-size: 4rem; margin-bottom: var(--space-lg); }
-    .program-title {
+    .program-card--med::before {
+      background: linear-gradient(135deg, #059669, #34d399);
+    }
+    
+    .program-card__icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-lg);
+      text-align: center;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    }
+    
+    .program-card__title {
       font-size: clamp(1.75rem, 4vw, 2.25rem);
       font-weight: 700;
       margin-bottom: var(--space-md);
-      color: var(--accent-primary);
+      text-align: center;
     }
-    .program-card--rec .program-title { color: #0066cc; }
-    .program-card--med .program-title { color: #059669; }
-    .program-description {
+    .program-card--rec .program-card__title { color: #0066cc; }
+    .program-card--med .program-card__title { color: #059669; }
+    
+    .program-card__description {
       font-size: 1.125rem;
       line-height: 1.7;
       color: var(--text-muted);
       margin-bottom: var(--space-xl);
+      text-align: center;
     }
-    .program-features {
+    
+    .program-card__features {
       list-style: none;
       padding: 0;
       margin: var(--space-xl) 0;
-      text-align: left;
+      flex-grow: 1;
     }
-    .program-features li {
-      padding: var(--space-sm) 0;
-      color: var(--text-muted);
+    
+    .program-card__features li {
+      padding: var(--space-sm) var(--space-md);
+      color: var(--text-base);
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: var(--space-sm);
+      line-height: 1.6;
     }
-    .program-features li::before {
+    
+    .program-card__features li::before {
       content: "✓";
       color: var(--accent-success);
       font-weight: 700;
       font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 0.1em;
     }
-    .program-btn {
+    
+    .program-card__cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -96,75 +145,110 @@
       border-radius: var(--radius-md);
       transition: all var(--transition-fast);
       margin-top: auto;
+      width: 100%;
+      max-width: 280px;
+      align-self: center;
     }
-    .program-btn--rec { background: #0066cc; color: white; }
-    .program-btn--rec:hover {
+    
+    .program-card--rec .program-card__cta {
+      background: #0066cc;
+      color: white;
+    }
+    .program-card--rec .program-card__cta:hover {
       background: #0052a3;
       transform: scale(1.05);
-      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
-      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.4);
     }
-    .program-btn--med { background: #059669; color: white; }
-    .program-btn--med:hover {
+    
+    .program-card--med .program-card__cta {
+      background: #059669;
+      color: white;
+    }
+    .program-card--med .program-card__cta:hover {
       background: #047857;
       transform: scale(1.05);
-      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.3);
-      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.4);
     }
-    .landing-hero { text-align: center; padding: var(--space-3xl) 0 var(--space-2xl); }
-    .landing-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--space-md); }
-    .landing-hero p {
-      font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    
+    .landing-footer {
+      text-align: center;
+      padding: var(--space-xl);
+      margin-top: var(--space-3xl);
+    }
+    .landing-footer__copyright {
+      margin-bottom: var(--space-sm);
+      font-size: 1rem;
+    }
+    .landing-footer__disclaimer {
+      font-size: 0.875rem;
       color: var(--text-muted);
-      max-width: 800px;
-      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .program-selector {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+      }
+      .program-card {
+        min-height: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .program-card {
+        transition: none;
+      }
+      .program-card:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
 <body data-page="landing">
+  <a href="#main" class="skip-link">Skip to content</a>
   <div class="site-shell single-column">
     <div class="glass-panel">
       <header class="landing-hero" role="banner">
         <h1>Maine Cannabis Compliance Hub</h1>
-        <p>Professional operational resources for Maine's cannabis industry. Select your program below.</p>
+        <p class="landing-hero__tagline">Professional operational resources for Maine's cannabis industry. Select your program below.</p>
       </header>
 
-      <main id="main">
-        <div class="program-selector">
-          <article class="glass-panel program-card program-card--rec">
-            <div class="program-icon">🌿</div>
-            <h2 class="program-title">Adult Use Program</h2>
-            <p class="program-description">Recreational cannabis retail compliance resources under Title 28-B</p>
-            <ul class="program-features">
+      <main id="main" role="main">
+        <section class="program-selector" aria-label="Program Selection">
+          <article class="glass-panel program-card program-card--rec" aria-labelledby="rec-title">
+            <div class="program-card__icon" aria-hidden="true">🌿</div>
+            <h2 id="rec-title" class="program-card__title">Adult Use Program</h2>
+            <p class="program-card__description">Recreational cannabis retail compliance resources under Title 28-B</p>
+            <ul class="program-card__features" aria-label="Adult Use Features">
               <li>Budtender & manager training guides</li>
               <li>Purchase limit calculator & tools</li>
               <li>METRC system integration resources</li>
               <li>Printable compliance signage</li>
               <li>OCP policy documents & guidance</li>
             </ul>
-            <a href="/rec/" class="program-btn program-btn--rec">Enter Adult Use →</a>
+            <a href="/rec/" class="program-card__cta" aria-label="Enter Adult Use Program">Enter Adult Use →</a>
           </article>
 
-          <article class="glass-panel program-card program-card--med">
-            <div class="program-icon">🏥</div>
-            <h2 class="program-title">Medical Program</h2>
-            <p class="program-description">Medical marijuana program compliance resources under Title 22</p>
-            <ul class="program-features">
+          <article class="glass-panel program-card program-card--med" aria-labelledby="med-title">
+            <div class="program-card__icon" aria-hidden="true">🏥</div>
+            <h2 id="med-title" class="program-card__title">Medical Program</h2>
+            <p class="program-card__description">Medical marijuana program compliance resources under Title 22</p>
+            <ul class="program-card__features" aria-label="Medical Program Features">
               <li>Caregiver & dispensary staff guides</li>
               <li>Patient verification procedures</li>
               <li>Registry system documentation</li>
               <li>Medical-specific compliance signs</li>
               <li>DHHS regulations & updates</li>
             </ul>
-            <a href="/med/" class="program-btn program-btn--med">Enter Medical →</a>
+            <a href="/med/" class="program-card__cta" aria-label="Enter Medical Program">Enter Medical →</a>
           </article>
-        </div>
+        </section>
       </main>
     </div>
 
-    <footer class="glass-panel">
-      <p>&copy; 2025 MaineMarijuana.us • Public reference archive • Not legal advice</p>
-      <p class="text-small text-muted">Consult Maine OCP and DHHS for official guidance.</p>
+    <footer class="glass-panel landing-footer" role="contentinfo">
+      <p class="landing-footer__copyright">&copy; 2025 MaineMarijuana.us • <a href="https://sid3.xyz" target="_blank" rel="noopener">sid3.xyz</a> • Public reference archive</p>
+      <p class="landing-footer__disclaimer">Not legal advice. Consult Maine OCP and DHHS for official guidance.</p>
     </footer>
   </div>
   <script src="script.js"></script>
